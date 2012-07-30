@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/jgaylard/.cache/spotify'
+let g:netrw_dirhist_2='/home/jgaylard/workspace/rails/trashtalk/app/views/welcome'
+let g:netrw_dirhist_3='/home/jgaylard/.vim/bundle/snipmate.vim/plugin'
+let g:netrw_dirhist_4='/home/jgaylard/Downloads/splunkfiles'
+let g:netrw_dirhist_5='/opt/splunkforwarder/var/log'
