@@ -37,3 +37,5 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/home/jgaylard/.rvm/gems/ruby-1.9.3-p0/bin:/home/jgaylard/.rvm/gems/ruby-1.9.3-p0@global/bin:/home/jgaylard/.rvm/rubies/ruby-1.9.3-p0/bin:/home/jgaylard/.rvm/bin:/home/jgaylard/.pythonbrew/bin:/home/jgaylard/.pythonbrew/pythons/Python-2.6.7/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc" # Loads pythonbrew
+set -o vi
+alias ctags='ctags -R'
