@@ -87,3 +87,9 @@ inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
+let g:ruby_debugger_default_script = 'script/rails s'
+let g:ruby_debugger_debug_mode = 1
+
+" Having issues with arrow keys in insert mode
+" http://vim.wikia.com/wiki/Fix_arrow_keys_that_display_A_B_C_D_on_remote_shell
+:set term=cons25
