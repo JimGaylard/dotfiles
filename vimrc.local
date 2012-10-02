@@ -1,0 +1,12 @@
+colorscheme desert
+set shortmess+=I
+
+" Key remapping
+inoremap jk <Esc>
+
+if has("autocmd")
+    autocmd BufWritePost .vimrc.local source $MYVIMRC
+endif
+
+nmap <leader>v :tabedit $MYVIMRC.local<CR>
+
