@@ -1,4 +1,3 @@
-colorscheme desert
 set shortmess+=I
 
 " Key remapping
@@ -9,4 +8,10 @@ if has("autocmd")
 endif
 
 nmap <leader>v :tabedit $MYVIMRC.local<CR>
+nmap <leader><leader>v :tabedit $MYVIMRC<CR>
 
+set background=dark
+set shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
+
+UnBundle 'godlygeek/csapprox'
