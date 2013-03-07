@@ -9,6 +9,7 @@ endif
 
 nmap <leader>v :tabedit $MYVIMRC.local<CR>
 nmap <leader><leader>v :tabedit $MYVIMRC<CR>
+set clipboard=unnamed
 
 set background=dark
 set shiftwidth=2 tabstop=2 softtabstop=2
