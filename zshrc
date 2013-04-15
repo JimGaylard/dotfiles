@@ -41,3 +41,4 @@ set -o emacs
 export PATH="/usr/local/heroku/bin:$PATH"
 export EDITOR=vim
 alias l='ls -lA'
+alias tmux='tmux -2'
