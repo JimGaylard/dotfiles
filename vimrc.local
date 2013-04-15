@@ -1,18 +1,37 @@
+
+set shell=zsh\ -l
 set shortmess+=I
 
 " Key remapping
-inoremap jk <Esc>
+  inoremap jk <Esc>
+
+  nmap <leader>v :tabedit $MYVIMRC.local<CR>
+  nmap <leader><leader>v :tabedit $MYVIMRC<CR>
+
+  map <C-J> <C-W>j
+  map <C-K> <C-W>k
+  map <C-L> <C-W>l
+  map <C-H> <C-W>h
+
+  "Bundle remappings
+    map <leader>d :VimuxCloseRunner<CR>
 
 if has("autocmd")
     autocmd BufWritePost .vimrc.local source $MYVIMRC
 endif
 
-nmap <leader>v :tabedit $MYVIMRC.local<CR>
-nmap <leader><leader>v :tabedit $MYVIMRC<CR>
 set clipboard=unnamed
 
 set background=dark
 set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
+" Vroom Config
+let g:vroom_use_vimux = 1
+let g:vroom_cucumber_path = "cucumber"
+let g:vroom_rspec_command = 'rspec '
+
+let g:vimuxOrientation = "h"
+
 UnBundle 'godlygeek/csapprox'
+UnBundle 'airblade/vim-gitgutter'

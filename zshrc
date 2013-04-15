@@ -29,15 +29,17 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails3 ruby bundler git-flow github heroku python rake rvm ssh-agent)
+plugins=(git rails3 ruby git-flow github heroku python rake ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jimg/.rvm/gems/ruby-1.9.3-p194/bin:/Users/jimg/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/jimg/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/jimg/.rvm/bin:/usr/local/sbin:~/bin:/Users/jimg/.rvm/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:~/bin
+chruby ruby-1.9.3
 
 ### Added by the Heroku Toolbelt
-set -o emacs
+set -o vi
+bindkey -v
 export PATH="/usr/local/heroku/bin:$PATH"
 export EDITOR=vim
 alias l='ls -lA'
