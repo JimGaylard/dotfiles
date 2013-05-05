@@ -34,4 +34,3 @@ let g:vroom_rspec_command = 'rspec '
 let g:vimuxOrientation = "h"
 
 UnBundle 'godlygeek/csapprox'
-UnBundle 'airblade/vim-gitgutter'

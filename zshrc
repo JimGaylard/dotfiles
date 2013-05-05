@@ -11,6 +11,7 @@ DISABLE_AUTO_TITLE="true"
 plugins=(git rails3 ruby git-flow github heroku python rake ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
+source /usr/local/share/chruby/chruby.sh
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:~/bin
