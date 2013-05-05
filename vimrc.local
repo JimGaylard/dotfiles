@@ -8,19 +8,23 @@ set shortmess+=I
   nmap <leader>v :tabedit $MYVIMRC.local<CR>
   nmap <leader><leader>v :tabedit $MYVIMRC<CR>
 
-  map <C-J> <C-W>j
-  map <C-K> <C-W>k
-  map <C-L> <C-W>l
-  map <C-H> <C-W>h
+  nmap <C-J> <C-W>j
+  nmap <C-K> <C-W>k
+  nmap <C-L> <C-W>l
+  nmap <C-H> <C-W>h
+
+  nmap <leader>map :TBrowseOutput map<CR>
 
   "Bundle remappings
-    map <leader>d :VimuxCloseRunner<CR>
+    nmap <leader>d :VimuxCloseRunner<CR>
 
 if has("autocmd")
     autocmd BufWritePost .vimrc.local source $MYVIMRC
 endif
 
-set clipboard=unnamed
+if $TMUX == ''
+  set clipboard+=unnamed
+endif
 
 set background=dark
 set shiftwidth=2 tabstop=2 softtabstop=2
@@ -31,7 +35,7 @@ let g:vroom_use_vimux = 1
 let g:vroom_cucumber_path = "cucumber"
 let g:vroom_rspec_command = 'rspec '
 
-let g:vimuxOrientation = "h"
+let g:vimuxOrientation = "v"
 
 UnBundle 'godlygeek/csapprox'
-UnBundle 'airblade/vim-gitgutter'
+UnBundle 'Puppet-Syntax-Highlighting'

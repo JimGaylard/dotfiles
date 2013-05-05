@@ -25,3 +25,4 @@ export EDITOR=vim
 
 alias l='ls -lA'
 alias tmux='tmux -2'
+alias vim='/usr/local/Cellar/vim/7.3.905/bin/vim'
