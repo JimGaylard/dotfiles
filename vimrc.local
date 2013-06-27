@@ -2,6 +2,8 @@
 set shell=zsh\ -l
 set shortmess+=I
 
+set nofoldenable
+
 " Key remapping
   inoremap jk <Esc>
 
@@ -22,13 +24,14 @@ if has("autocmd")
     autocmd BufWritePost .vimrc.local source $MYVIMRC
 endif
 
-if $TMUX == ''
-  set clipboard+=unnamed
-endif
+"set clipboard+=unnamed
 
 set background=dark
 set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
+
+set textwidth=80
+set colorcolumn=+1
 
 " Vroom Config
 let g:vroom_use_vimux = 1
@@ -39,3 +42,5 @@ let g:vimuxOrientation = "v"
 
 UnBundle 'godlygeek/csapprox'
 UnBundle 'Puppet-Syntax-Highlighting'
+
+autocmd VimEnter * !rm /tmp/myVimLog
