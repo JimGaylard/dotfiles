@@ -1,8 +1,10 @@
+# Dotfiles
+
 Important config files
 
-Instructions
-============
-git clone this repo  
+## Instructions
+
+clone this repo  
 run makesymlinks.sh (check script before running it)  
 
 
