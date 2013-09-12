@@ -1,4 +1,4 @@
-. /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+source .bash_local
 . /usr/local/share/chruby/chruby.sh
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:~/bin:/Users/jimg/Library/Python/2.7/bin:$PATH
@@ -13,7 +13,7 @@ alias ll='ls -AhCGF'
 alias l='ls -alGF'
 alias la='ls -AG'
 
-alias tmux='tmux -2'
+alias tmux='tmux'
 alias vim='/usr/local/bin/vim'
 alias vi='/usr/local/bin/vim'
 
