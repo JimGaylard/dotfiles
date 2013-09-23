@@ -13,10 +13,6 @@ alias ll='ls -AhCGF'
 alias l='ls -alGF'
 alias la='ls -AG'
 
-alias tmux='tmux'
-alias vim='/usr/local/bin/vim'
-alias vi='/usr/local/bin/vim'
-
 alias be='bundle exec'
 alias gst='git status'
 
