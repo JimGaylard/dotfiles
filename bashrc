@@ -17,7 +17,17 @@ alias be='bundle exec'
 alias gst='git status'
 
 shopt -s histappend
-#PROMPT_COMMAND='history -a; history -n'
+
+# gpg-agent --daemon --enable-ssh-support --write-env-file "${HOME}/.gpg-agent-info"
+# if [ -f "${HOME}/.gpg-agent-info" ]; then
+#     . "${HOME}/.gpg-agent-info"
+#     export GPG_AGENT_INFO
+#     export SSH_AUTH_SOCK
+# fi
+
+# GPG_TTY=$(tty)
+# export GPG_TTY
+
 
 # Delete an entry from ~/.ssh/known_hosts
 # Usage: sshdel <line_number>
