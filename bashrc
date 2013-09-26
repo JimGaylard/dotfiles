@@ -1,4 +1,4 @@
-source .bash_local
+source ~/.bash_local
 . /usr/local/share/chruby/chruby.sh
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:~/bin:/Users/jimg/Library/Python/2.7/bin:$PATH
@@ -15,6 +15,8 @@ alias la='ls -AG'
 
 alias be='bundle exec'
 alias gst='git status'
+
+alias vi=/usr/local/bin/vim
 
 shopt -s histappend
 

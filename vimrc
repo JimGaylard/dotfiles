@@ -124,6 +124,9 @@ source ~/.vimrc.bundles
     nmap <leader>v :tabedit $MYVIMRC<CR>
     nmap <leader>map :TBrowseOutput map<CR>
 
+    nnoremap <leader>p :set invpaste<CR>
+    nmap <leader>w :%s/\s\+$/<CR>
+
     nmap ,cf :let @*=expand("%")<CR>
     nmap ,cp :let @*=expand("%:p")<CR>
 
@@ -213,6 +216,10 @@ source ~/.vimrc.bundles
       let NERDTreeMouseMode=2
       let NERDTreeShowHidden=1
       let NERDTreeKeepTreeInNewTab=1
+    " }
+
+    " Numbers.vim {
+      let g:numbers_exclude = ['nerdtree']
     " }
 
     " Tabularize {
