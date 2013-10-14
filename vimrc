@@ -124,6 +124,8 @@ source ~/.vimrc.bundles
     nmap <leader>v :tabedit $MYVIMRC<CR>
     nmap <leader>map :TBrowseOutput map<CR>
 
+    nmap <leader>b Orequire 'pry'; binding.pry<Esc>
+
     nnoremap <leader>p :set invpaste<CR>
     nmap <leader>w :%s/\s\+$/<CR>
 
