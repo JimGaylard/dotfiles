@@ -16,6 +16,7 @@ alias la='ls -AG'
 
 alias be='bundle exec'
 alias gst='git status'
+alias gd='git diff'
 
 alias vi=/usr/local/bin/vim
 
