@@ -1,0 +1,5 @@
+#!/bin/bash
+. /Users/jimg/Library/Python/2.7/lib/python/site-packages/powerline/bindings/bash/powerline.sh
+
+PATH=$PATH:/Users/jimg/Library/Python/2.7/bin:$PATH
+chruby ruby-1.9.3-p484
