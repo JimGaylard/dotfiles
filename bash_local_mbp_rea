@@ -1,0 +1,22 @@
+#!/bin/bash
+source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+export PATH=$PATH:/usr/local/share/npm/bin
+
+chruby ruby-1.9.3-p429
+
+### START-Keychain ###
+# Let  re-use ssh-agent and/or gpg-agent between logins
+/usr/local/bin/keychain $HOME/.ssh/id_rsa $HOME/.ssh/id_rsa2 $HOME/.ssh/utah-corp-ap-southeast-2.pem > /dev/null
+source $HOME/.keychain/$HOSTNAME-sh
+source $HOME/.keychain/$HOSTNAME-sh-gpg
+### End-Keychain ###
+
+# added to fix outdated ssl certs causing rubygems error
+# brew install openssl
+# brew link openssl --force
+# brew install curl-ca-bundle
+#
+# http://railsapps.github.io/openssl-certificate-verify-failed.html
+export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+
+alias sed=gsed
