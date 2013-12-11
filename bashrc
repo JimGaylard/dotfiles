@@ -1,10 +1,9 @@
-source ~/.bash_local
 source /usr/local/share/chruby/chruby.sh
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:~/bin:/Users/jimg/Library/Python/2.7/bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/bin:/sbin:~/bin:$PATH
 export PATH=$PATH:/usr/local/share/npm/bin
 
-chruby ruby-1.9.3
+source ~/.bash_local
 
 set -o vi
 
