@@ -8,3 +8,4 @@ coverage
 rdoc
 tmp
 TODO*
+.DS_Store

@@ -127,7 +127,7 @@ source ~/.vimrc.bundles.local
     nmap <leader>b Orequire 'pry'; binding.pry<Esc>
 
     nnoremap <leader>p :set invpaste<CR>
-    nmap <leader>w :%s/\s\+$/<CR>
+    nmap <leader>w mp:%s/\s\+$/<CR>'p
 
     nnoremap <leader>n :NumbersToggle<CR>
 
@@ -141,6 +141,8 @@ source ~/.vimrc.bundles.local
     map <C-K> <C-W>k
     map <C-L> <C-W>l
     map <C-H> <C-W>h
+    map <S-H> gT
+    map <S-L> gt
 
     " Wrapped lines goes down/up to next row, rather than next line in file.
     noremap j gj
@@ -205,7 +207,8 @@ source ~/.vimrc.bundles.local
     " }
 
     "gist-vim {
-      let g:github_api_url = 'https://git.realestate.com.au/api/v3'
+      let g:github_user = "JimGaylard"
+      let g:gist_post_private = 1
     "}
 
     " NerdTree {
