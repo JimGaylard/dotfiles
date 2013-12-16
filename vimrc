@@ -134,6 +134,8 @@ source ~/.vimrc.bundles.local
     nmap ,cf :let @*=expand("%")<CR>
     nmap ,cp :let @*=expand("%:p")<CR>
 
+    nmap ,gl :Git pull --rebase
+
     nmap ,t :!ctags -R<CR>
     "autocmd BufWritePost *.rb,*.js silent! !/usr/local/bin/ctags -R 2> /dev/null &
 
