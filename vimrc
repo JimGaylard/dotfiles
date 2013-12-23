@@ -231,6 +231,14 @@ source ~/.vimrc.bundles.local
       let g:numbers_exclude = ['nerdtree']
     " }
 
+    " RainbowParentheses {
+
+      au VimEnter * RainbowParenthesesToggle
+      au Syntax * RainbowParenthesesLoadRound
+      au Syntax * RainbowParenthesesLoadSquare
+      au Syntax * RainbowParenthesesLoadBraces
+    " }
+
     " Tabularize {
         nmap <Leader>a& :Tabularize /&<CR>
         vmap <Leader>a& :Tabularize /&<CR>
