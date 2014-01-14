@@ -2,7 +2,7 @@
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 export PATH=$PATH:/usr/local/share/npm/bin
 
-chruby ruby-1.9.3-p429
+chruby ruby-2.0
 
 ### START-Keychain ###
 # Let  re-use ssh-agent and/or gpg-agent between logins
@@ -18,5 +18,17 @@ source $HOME/.keychain/$HOSTNAME-sh-gpg
 #
 # http://railsapps.github.io/openssl-certificate-verify-failed.html
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+export ARCHFLAGS="-arch x86_64"
 
 alias sed=gsed
+
+alias updatedb='/usr/libexec/locate.updatedb'
+
+# Get cukes and specs passing faster for cp-agentadmin and  cp-domain
+# https://community.rea-group.com/docs/DOC-16002
+export RUBY_HEAP_MIN_SLOTS=500000
+export RUBY_HEAP_SLOTS_INCREMENT=250000
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+export RUBY_GC_MALLOC_LIMIT=50000000
+export CP_DOMAIN_ENV=development
+export AA_ENVIRONMENT=development
