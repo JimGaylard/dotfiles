@@ -4,6 +4,7 @@ tags
 .bundle
 .config
 .yardoc
+.env
 coverage
 rdoc
 tmp
