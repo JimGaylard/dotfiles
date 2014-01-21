@@ -17,7 +17,8 @@ alias la='ls -AG'
 alias be='bundle exec'
 alias gst='git status'
 alias gd='git diff'
-alias gc='git checkout'
+alias gco='git checkout'
+alias gpp='git pull --rebase && git push'
 
 alias sshjump='ssh -t -A deploy ssh'
 
