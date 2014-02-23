@@ -12,8 +12,7 @@
 
 " }
 
-source ~/.vimrc.bundles
-source ~/.vimrc.bundles.local
+  source ~/.vimrc.bundles
 
 " General {
 
