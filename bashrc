@@ -10,9 +10,9 @@ set -o vi
 export HISTCONTROL=ignoreboth
 export EDITOR=/usr/local/bin/vim
 
-alias ll='ls -lG'
-alias l='ls -alGF'
-alias la='ls -AG'
+alias ll='ls -l'
+alias l='ls -alF'
+alias la='ls -A'
 
 alias be='bundle exec'
 alias gst='git status'
