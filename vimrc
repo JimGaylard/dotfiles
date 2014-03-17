@@ -110,7 +110,7 @@
   set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
   " Remove trailing whitespaces and ^M chars
   autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
-  autocmd FileType c,cpp,java,go,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+  autocmd FileType c,cpp,java,go,php,javascript,ruby,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
   autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
   autocmd BufNewFile,BufRead *.coffee set filetype=coffee
