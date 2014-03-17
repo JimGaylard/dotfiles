@@ -3,7 +3,6 @@
 
 " Basics {
   set nocompatible        " Must be first line
-  set noesckeys " Experiment, this may cause issue
 
   "correct setup for vundle
   filetype on
