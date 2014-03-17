@@ -113,6 +113,8 @@
   autocmd FileType c,cpp,java,go,php,javascript,ruby,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
   autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
+  autocmd BufRead,BufNewFile *.log set filetype=log
+  autocmd BufRead,BufNewFile */log/* set filetype=log
   autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
 " }
