@@ -32,6 +32,11 @@ shopt -s histappend
 # Usage: sshdel <line_number>
 function sshdel { perl -i -n -e "print unless (\$. == $1)" ~/.ssh/known_hosts; }
 
-function gst_all { for dir in $(ls -A); do [ -d $dir/.git ] && echo $dir && cd $dir && git status && cd ..; done }
+function gst_all {
+  for dir in $(ls -A)
+  do
+    [ -d $dir/.git ] && echo "<-----------$dir------------>" && cd $dir && git status && cd ..
+  done 
+}
 
 function gpull_all { for dir in $(ls -A); do [ -d $dir/.git ] && echo $dir && cd $dir && git pull && cd ..; done }
