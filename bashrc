@@ -8,6 +8,8 @@ source ~/.bash_local
 set -o vi
 
 export HISTCONTROL=ignoreboth
+export HISTSIZE=10000
+export HISTFILESIZE=10000
 export EDITOR=/usr/local/bin/vim
 
 alias ll='ls -lG'
