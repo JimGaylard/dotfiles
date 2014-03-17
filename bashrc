@@ -40,3 +40,21 @@ function gst_all {
 }
 
 function gpull_all { for dir in $(ls -A); do [ -d $dir/.git ] && echo $dir && cd $dir && git pull && cd ..; done }
+
+function success {
+  rc=$?
+  if [ $rc == 0 ]
+  then
+    if hash say
+      then
+        say success
+    fi
+    echo success
+  else
+    if hash say
+    then
+      say failed
+    fi
+    echo failed
+  fi
+}
