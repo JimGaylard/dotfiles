@@ -1,7 +1,8 @@
 #!/bin/bash
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 export PATH=$PATH:/usr/local/share/npm/bin
-
+# call 'gitx .' from any dir
+export PATH=$PATH:/Applications/GitX.app/Contents/Resources
 chruby ruby-2.0
 
 ### START-Keychain ###
