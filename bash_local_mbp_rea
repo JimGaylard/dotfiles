@@ -1,4 +1,7 @@
 #!/bin/bash
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 export PATH=$PATH:/usr/local/share/npm/bin
 # call 'gitx .' from any dir

@@ -1,1 +1,1 @@
-[] Move chruby out of bashrc....?
+[Y] Move chruby out of bashrc....?
