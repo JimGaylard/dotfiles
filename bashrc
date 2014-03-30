@@ -1,6 +1,3 @@
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-
 export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/bin:/sbin:~/bin:$PATH
 
 source ~/.bash_local
@@ -8,6 +5,8 @@ source ~/.bash_local
 set -o vi
 
 export HISTCONTROL=ignoreboth
+export HISTSIZE=10000
+export HISTFILESIZE=10000
 export EDITOR=/usr/local/bin/vim
 
 alias ll='ls -lG'
@@ -30,6 +29,29 @@ shopt -s histappend
 # Usage: sshdel <line_number>
 function sshdel { perl -i -n -e "print unless (\$. == $1)" ~/.ssh/known_hosts; }
 
-function gst_all { for dir in $(ls -A); do [ -d $dir/.git ] && echo $dir && cd $dir && git status && cd ..; done }
+function gst_all {
+  for dir in $(ls -A)
+  do
+    [ -d $dir/.git ] && echo "<-----------$dir------------>" && cd $dir && git status && cd ..
+  done 
+}
 
 function gpull_all { for dir in $(ls -A); do [ -d $dir/.git ] && echo $dir && cd $dir && git pull && cd ..; done }
+
+function success {
+  rc=$?
+  if [ $rc == 0 ]
+  then
+    if hash say
+      then
+        say success
+    fi
+    echo success
+  else
+    if hash say
+    then
+      say failed
+    fi
+    echo failed
+  fi
+}

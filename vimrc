@@ -3,7 +3,6 @@
 
 " Basics {
   set nocompatible        " Must be first line
-  set noesckeys " Experiment, this may cause issue
 
   "correct setup for vundle
   filetype on
@@ -13,8 +12,7 @@
 
 " }
 
-source ~/.vimrc.bundles
-source ~/.vimrc.bundles.local
+  source ~/.vimrc.bundles
 
 " General {
 
@@ -112,9 +110,11 @@ source ~/.vimrc.bundles.local
   set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
   " Remove trailing whitespaces and ^M chars
   autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
-  autocmd FileType c,cpp,java,go,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+  autocmd FileType c,cpp,java,go,php,javascript,ruby,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
   autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
+  autocmd BufRead,BufNewFile *.log set filetype=log
+  autocmd BufRead,BufNewFile */log/* set filetype=log
   autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
 " }
@@ -196,17 +196,8 @@ source ~/.vimrc.bundles.local
 
 " Plugins {
 
-    " Misc {
-    " }
-
     " Ctags {
       set tags=./tags;/,~/.vimtags
-    " }
-
-    " AutoCloseTag {
-      " Make it so AutoCloseTag works for xml and xhtml files as well
-      au FileType xhtml,xml ru ftplugin/html/autoclosetag.vim
-      nmap <Leader>ac <Plug>ToggleAutoCloseMappings
     " }
 
     "gist-vim {

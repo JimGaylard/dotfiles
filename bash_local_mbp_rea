@@ -1,12 +1,22 @@
 #!/bin/bash
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 export PATH=$PATH:/usr/local/share/npm/bin
-
+# call 'gitx .' from any dir
+export PATH=$PATH:/Applications/GitX.app/Contents/Resources
 chruby ruby-2.0
 
 ### START-Keychain ###
 # Let  re-use ssh-agent and/or gpg-agent between logins
-/usr/local/bin/keychain $HOME/.ssh/id_rsa $HOME/.ssh/id_rsa2 $HOME/.ssh/utah-corp-ap-southeast-2.pem > /dev/null
+/usr/local/bin/keychain \
+  $HOME/.ssh/id_rsa \
+  $HOME/.ssh/id_rsa2 \
+  $HOME/.ssh/id_rsa_minthome \
+  $HOME/.ssh/utah-corp-ap-southeast-2.pem \
+  > /dev/null
+
 source $HOME/.keychain/$HOSTNAME-sh
 source $HOME/.keychain/$HOSTNAME-sh-gpg
 ### End-Keychain ###
@@ -31,5 +41,7 @@ export RUBY_HEAP_SLOTS_INCREMENT=250000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=50000000
 export CP_DOMAIN_ENV=development
-export AA_ENVIRONMENT=development
-export CP_AUTH_SSO_ENV=development
+#export AA_ENVIRONMENT=development
+#export CP_AUTH_SSO_ENV=development
+#export SHARED_COMPONENTS_ENV=development
+ulimit -n 8192
