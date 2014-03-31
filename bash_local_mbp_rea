@@ -34,6 +34,8 @@ alias sed=gsed
 
 alias updatedb='sudo /usr/libexec/locate.updatedb'
 
+alias rssh='rea-ec2-ssh'
+
 # Get cukes and specs passing faster for cp-agentadmin and  cp-domain
 # https://community.rea-group.com/docs/DOC-16002
 export RUBY_HEAP_MIN_SLOTS=500000
