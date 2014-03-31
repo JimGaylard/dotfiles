@@ -33,7 +33,7 @@ function gst_all {
   for dir in $(ls -A)
   do
     [ -d $dir/.git ] && echo "<-----------$dir------------>" && cd $dir && git status && cd ..
-  done 
+  done
 }
 
 function gpull_all { for dir in $(ls -A); do [ -d $dir/.git ] && echo $dir && cd $dir && git pull && cd ..; done }
@@ -47,11 +47,13 @@ function success {
         say success
     fi
     echo success
+    return 0
   else
     if hash say
     then
       say failed
     fi
     echo failed
+    return 1
   fi
 }
