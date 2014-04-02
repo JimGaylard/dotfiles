@@ -127,6 +127,8 @@
 
     nmap <leader>b Orequire 'pry'; binding.pry<Esc>
 
+    nmap <leader>= gg=G
+
     nnoremap <leader>p :set invpaste<CR>
     nmap <leader>w mp:%s/\s\+$/<CR>'p
 
