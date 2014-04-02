@@ -223,6 +223,7 @@
 
     " Numbers.vim {
       let g:numbers_exclude = ['nerdtree']
+      let g:enable_numbers = 0
     " }
 
     " RainbowParentheses {
