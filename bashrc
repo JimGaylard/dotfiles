@@ -2,12 +2,21 @@ export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/bin:/sbin:~/bin:$
 
 source ~/.bash_local
 
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+
 set -o vi
 
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
 export HISTFILESIZE=10000
 export EDITOR=/usr/local/bin/vim
+
+#if [ $TERM != "linux" ]; then
+TITLEBAR="\[\e]2;\w\a\]"
+#fi
+GIT_PS1_SHOWDIRTYSTATE=1
+PROMPT="\u@\h:\w\$(__git_ps1 ' [%s]')\n\$ "
+PS1="$TITLEBAR\[\e[32;1m\]$PROMPT\[\e[0m\]"
 
 alias ll='ls -lG'
 alias l='ls -alGF'
