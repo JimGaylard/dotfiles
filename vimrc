@@ -58,7 +58,7 @@
                                   " Things like vim-gitgutter will match LineNr highlight
   highlight clear CursorLineNr   " Remove highlight color from current line number
 
-  set textwidth=80
+  "set textwidth=80
   set colorcolumn=+1
 
   if has('cmdline_info')
@@ -139,7 +139,7 @@
 
     nmap ,gl :Git pull --rebase
 
-    nmap ,t :!ctags -R<CR>
+    nmap ,t :!ctags -R .<CR>
     "autocmd BufWritePost *.rb,*.js silent! !/usr/local/bin/ctags -R 2> /dev/null &
 
     map <C-J> <C-W>j
@@ -199,7 +199,7 @@
 " Plugins {
 
     " Ctags {
-      set tags=./tags;/,~/.vimtags
+      set tags=tags,./tags;/,~/.vimtags
     " }
 
     "gist-vim {
