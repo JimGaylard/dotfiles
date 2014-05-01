@@ -48,3 +48,6 @@ export CP_DOMAIN_ENV=development
 #export CP_AUTH_SSO_ENV=development
 #export SHARED_COMPONENTS_ENV=development
 ulimit -n 8192
+
+# connect docker client to VM
+export DOCKER_HOST=tcp://localhost:4243
