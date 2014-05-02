@@ -42,7 +42,7 @@ function set_git_branch {
   elif [[ ${git_status} =~ "Changes to be committed" ]]; then
     state="${YELLOW}"
   else
-    state="${RED}"
+    state="${LIGHT_RED}"
   fi
 
   # Set arrow icon based on status against remote.
@@ -102,6 +102,7 @@ function set_svn_branch {
 # Return the prompt symbol to use, colorized based on the return value of the
 # previous command.
 function set_prompt_symbol () {
+  LAST_COMMAND=""
   if test $1 -eq 0 ; then
       if [ "$AWS_ENVIRONMENT" == "" ]; then
         PROMPT_SYMBOL="\$"
@@ -109,7 +110,8 @@ function set_prompt_symbol () {
         PROMPT_SYMBOL="${CYAN}\$${COLOR_NONE}"
       fi
   else
-     PROMPT_SYMBOL="${RED}\$${COLOR_NONE}"
+    LAST_COMMAND="${RED}ERROR: $1${COLOR_NONE}"
+    PROMPT_SYMBOL="${RED}\$${COLOR_NONE}"
   fi
 }
 
@@ -150,7 +152,17 @@ function set_bash_prompt () {
 
   # Set the bash prompt variable.
   #PS1="${LIGHT_GRAY}\w${COLOR_NONE} ${YELLOW}($(parse_ruby_version))${COLOR_NONE}${AWS_ENV} ${PROMPT_SYMBOL} "
-  PS1="${BLUE}\u@\h${COLOR_NONE} ${YELLOW}($(parse_ruby_version))${COLOR_NONE}${BRANCH}${AWS_ENV}\n${LIGHT_GRAY}\w${COLOR_NONE}\n${PROMPT_SYMBOL} "
+  read -r -d '' PROMPT_STRING <<-_EOF_
+${BLUE}\u@\h${COLOR_NONE} \
+${YELLOW}($(parse_ruby_version))${COLOR_NONE} \
+${BRANCH} \
+${AWS_ENV} \
+${LAST_COMMAND}\n\
+${LIGHT_GRAY}\w${COLOR_NONE}\n\
+${PROMPT_SYMBOL}
+_EOF_
+
+  PS1="${PROMPT_STRING} "
 }
 
 # Tell bash to execute this function just before displaying its prompt.
