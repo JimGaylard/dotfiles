@@ -133,6 +133,15 @@ function set_bash_prompt () {
     BRANCH=''
   fi
 
+  #GIT_PS1_SHOWDIRTYSTATE=1
+  #if [ __git_ps1 eq "[master]" ]
+  #  BRANCH=$(__git_ps1 ' ${GREEN}[%s]${COLOR_NONE}')
+  #elif [ __git_ps1 eq "[master *]" ]
+  #  BRANCH=$(__git_ps1 ' ${YELLOW}[%s]${COLOR_NONE}')
+  #else
+  #  BRANCH=$(__git_ps1 ' ${YELLOW}[%s]${COLOR_NONE}')
+  #fi
+
   if [ "$AWS_ENVIRONMENT" != "" ]; then
     AWS_ENV=" ${CYAN}(AWS:${AWS_ENVIRONMENT})${COLOR_NONE}"
   else
@@ -141,7 +150,7 @@ function set_bash_prompt () {
 
   # Set the bash prompt variable.
   #PS1="${LIGHT_GRAY}\w${COLOR_NONE} ${YELLOW}($(parse_ruby_version))${COLOR_NONE}${AWS_ENV} ${PROMPT_SYMBOL} "
-  PS1="${YELLOW}($(parse_ruby_version))${COLOR_NONE}${BRANCH}${AWS_ENV}\n${LIGHT_GRAY}\w${COLOR_NONE}\n  ${PROMPT_SYMBOL} "
+  PS1="${BLUE}\u@\h${COLOR_NONE} ${YELLOW}($(parse_ruby_version))${COLOR_NONE}${BRANCH}${AWS_ENV}\n${LIGHT_GRAY}\w${COLOR_NONE}\n${PROMPT_SYMBOL} "
 }
 
 # Tell bash to execute this function just before displaying its prompt.

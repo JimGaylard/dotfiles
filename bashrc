@@ -1,8 +1,8 @@
 export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/bin:/sbin:~/bin:$PATH
 
-source ~/.bash_local
+[ -e ~/.bash_local ] && source ~/.bash_local
 
-source /usr/local/etc/bash_completion.d/git-prompt.sh
+[ -e /usr/local/etc/bash_completion.d/git-prompt.sh ] &&  source /usr/local/etc/bash_completion.d/git-prompt.sh
 
 set -o vi
 
@@ -17,6 +17,8 @@ TITLEBAR="\[\e]2;\w\a\]"
 GIT_PS1_SHOWDIRTYSTATE=1
 PROMPT="\u@\h:\w\$(__git_ps1 ' [%s]')\n\$ "
 PS1="$TITLEBAR\[\e[32;1m\]$PROMPT\[\e[0m\]"
+
+[ -e ~/.bash_prompt ] && source ~/.bash_prompt
 
 alias ll='ls -lG'
 alias l='ls -alGF'
