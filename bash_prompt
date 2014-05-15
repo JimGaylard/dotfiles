@@ -100,28 +100,18 @@ function set_svn_branch {
   BRANCH=" ${STATE_SVN}(${branch})${COLOR_NONE}"
 }
 
-function smiley() {
-   ## build a smiley depending on the status of the last command
-   if [ $? == 0 ] 
-   then
-       export smiley="${GREEN}^_^${NORMAL}"
-   else
-       export smiley="${RED}0_o${NORMAL}"
-   fi
-}
-
 # Return the prompt symbol to use, colorized based on the return value of the
 # previous command.
 function set_prompt_symbol () {
-  LAST_COMMAND=""
+  ERROR_CODE=""
   if test $1 -eq 0 ; then
       if [ "$AWS_ENVIRONMENT" == "" ]; then
-        PROMPT_SYMBOL="^_^"
+        PROMPT_SYMBOL=${GREEN}"^_^"${COLOR_NONE}
       else
         PROMPT_SYMBOL="${CYAN}^_^${COLOR_NONE}"
       fi
   else
-    LAST_COMMAND="${RED}ERROR: $1${COLOR_NONE}"
+    ERROR_CODE="${RED}ERROR: $1${COLOR_NONE}"
     PROMPT_SYMBOL="${RED}0_o${COLOR_NONE}"
   fi
 }
@@ -166,10 +156,10 @@ function set_bash_prompt () {
   read -r -d '' PROMPT_STRING <<-_EOF_
 ${DARK_GRAY}this is a blank line${COLOR_NONE}\n\
 ${BLUE}\u@\h${COLOR_NONE} \
-${YELLOW}($(parse_ruby_version))${COLOR_NONE} \
-${BRANCH} \
-${AWS_ENV} \
-${LAST_COMMAND}\n\
+${YELLOW}($(parse_ruby_version))${COLOR_NONE}\
+${BRANCH}\
+${AWS_ENV}\
+${ERROR_CODE}\
 ${LIGHT_GRAY}\w${COLOR_NONE}\n\
 ${PROMPT_SYMBOL}
 _EOF_
