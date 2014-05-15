@@ -52,3 +52,4 @@ ulimit -n 8192
 
 # connect docker client to VM
 export DOCKER_HOST=tcp://localhost:4243
+export AWS_REGION=ap-southeast-2
