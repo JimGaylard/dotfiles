@@ -1,10 +1,27 @@
 export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/bin:/sbin:~/bin:$PATH
 
+# source other bash files
+################################################
 [ -e ~/.bash_local ] && source ~/.bash_local
 [ -e ~/.bash_functions ] && source ~/.bash_functions
 
-[ -e /usr/local/etc/bash_completion.d/git-prompt.sh ] &&  source /usr/local/etc/bash_completion.d/git-prompt.sh
+# fallback to basic bash prompt if bash_prompt file not present
+# source git completion for git prompt
+[ -e /usr/local/etc/bash_completion.d/git-prompt.sh ] \
+  &&  source /usr/local/etc/bash_completion.d/git-prompt.sh
 
+if [ -e ~/.bash_prompt ]
+then
+  source ~/.bash_prompt
+else
+  TITLEBAR="\[\e]2;\w\a\]"
+  GIT_PS1_SHOWDIRTYSTATE=1
+  PROMPT="\u@\h:\w\$(__git_ps1 ' [%s]')\n\$ "
+  PS1="$TITLEBAR\[\e[32;1m\]$PROMPT\[\e[0m\]"
+fi
+
+# set environment and aliases
+################################################
 set -o vi
 
 export HISTCONTROL=ignoreboth
@@ -12,14 +29,7 @@ export HISTSIZE=10000
 export HISTFILESIZE=10000
 export EDITOR=/usr/local/bin/vim
 
-#if [ $TERM != "linux" ]; then
-TITLEBAR="\[\e]2;\w\a\]"
-#fi
-GIT_PS1_SHOWDIRTYSTATE=1
-PROMPT="\u@\h:\w\$(__git_ps1 ' [%s]')\n\$ "
-PS1="$TITLEBAR\[\e[32;1m\]$PROMPT\[\e[0m\]"
-
-[ -e ~/.bash_prompt ] && source ~/.bash_prompt
+shopt -s histappend
 
 alias ll='ls -lG'
 alias l='ls -alGF'
