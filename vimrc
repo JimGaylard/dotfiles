@@ -125,6 +125,8 @@
     nmap <leader>v :tabedit $MYVIMRC<CR>
     nmap <leader>map :TBrowseOutput map<CR>
 
+    nmap / /\v
+
     nmap <leader>b Orequire 'pry'; binding.pry<Esc>
 
     nmap <leader>= gg=G
