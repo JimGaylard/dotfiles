@@ -1,11 +1,12 @@
 #!/bin/bash
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+[ -e /usr/local/share/chruby/chruby.sh ] && source /usr/local/share/chruby/chruby.sh \
+  && chruby ruby-2.0
+
+[ -e /usr/local/share/chruby/auto.sh ] && source /usr/local/share/chruby/auto.sh
 
 export PATH=$PATH:/usr/local/share/npm/bin
 # call 'gitx .' from any dir
 export PATH=$PATH:/Applications/GitX.app/Contents/Resources
-chruby ruby-2.0
 
 ### START-Keychain ###
 # Let  re-use ssh-agent and/or gpg-agent between logins
