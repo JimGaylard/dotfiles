@@ -8,30 +8,22 @@ set -e
 
 ########## Variables
 
-dir=~/dotfiles                         # dotfiles directory
-olddir=~/dotfiles_old$(date +"%y%m%d%H%M") # old dotfiles backup directory
+dir='~/dotfiles'                         # dotfiles directory
+olddir='~/dotfiles_old'$(date +"%y%m%d%H%M") # old dotfiles backup directory
 # list of files/folders to symlink in homedir
-files="bashrc bash_profile gitignore_global pryrc \
+files="bashrc bash_profile bash_functions gitignore_global pryrc \
        tmux.conf vimrc vimrc.bundles"
 
 ##########
 
 # clone vundle for vim
+echo "cloning vundle to ~/.vim/bundle/vundle"
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
-wget -O chruby-0.3.8.tar.gz https://github.com/postmodern/chruby/archive/v0.3.8.tar.gz
-tar -xzvf chruby-0.3.8.tar.gz
-cd chruby-0.3.8/
-sudo make install
+echo "done..."
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
-echo "...done"
-
-# change to the dotfiles directory
-echo "Changing to the $dir directory"
-cd $dir
 echo "...done"
 
 # move any existing dotfiles in homedir to dotfiles_old
