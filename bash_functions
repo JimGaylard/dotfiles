@@ -32,3 +32,7 @@ function success {
     return 1
   fi
 }
+
+function aws_credentials {
+  eval $(gpg -d $1)
+}
