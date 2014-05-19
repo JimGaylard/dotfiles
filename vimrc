@@ -286,17 +286,23 @@
       let g:indent_guides_start_level = 2
       let g:indent_guides_guide_size = 1
       let g:indent_guides_enable_on_vim_startup = 0
-  " }
+    " }
 
-    nmap <leader>d :VimuxCloseRunner<CR>
+      nmap <leader>d :VimuxCloseRunner<CR>
 
-  " Vroom Config {
-    let g:vroom_use_vimux = 1
-    let g:vroom_cucumber_path = "cucumber"
-    let g:vroom_rspec_command = 'rspec '
+    " vim-surround {
+      nmap <leader>" ys$"
+      nmap <leader>' ys$'
+      nmap <leader>) ys$)
+    " }
 
-    let g:vimuxOrientation = "v"
-  " }
+    " Vroom Config {
+      let g:vroom_use_vimux = 1
+      let g:vroom_cucumber_path = "cucumber"
+      let g:vroom_rspec_command = "rspec "
+
+      let g:vimuxOrientation = "v"
+    " }
 
 " }
 
