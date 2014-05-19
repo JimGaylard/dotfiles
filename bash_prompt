@@ -102,7 +102,6 @@ function set_svn_branch {
 # Return the prompt symbol to use, colorized based on the return value of the
 # previous command.
 function set_prompt_symbol () {
-  ERROR_CODE=" "
   if test $1 -eq 0 ; then
       if [ "$AWS_ENVIRONMENT" == "" ]; then
         PROMPT_SYMBOL=${GREEN}"^_^"${COLOR_NONE}
@@ -110,7 +109,6 @@ function set_prompt_symbol () {
         PROMPT_SYMBOL="${CYAN}^_^${COLOR_NONE}"
       fi
   else
-    ERROR_CODE="${RED}ERROR: $1${COLOR_NONE} "
     PROMPT_SYMBOL="${RED}0_o${COLOR_NONE}"
   fi
 }
@@ -157,7 +155,6 @@ ${DARK_GRAY}this is a blank line${COLOR_NONE}\n\
 ${BLUE}\u@\h${COLOR_NONE} \
 ${YELLOW}($(parse_ruby_version))${COLOR_NONE}\
 ${BRANCH} \
-${ERROR_CODE}\
 ${LIGHT_GRAY}\w${COLOR_NONE}\n\
 ${PROMPT_SYMBOL}
 _EOF_
