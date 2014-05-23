@@ -288,6 +288,12 @@
       let g:indent_guides_enable_on_vim_startup = 0
   " }
 
+    " Surround to end of line
+    nmap <leader>' ys$'
+    nmap <leader>" ys$"
+    nmap <leader>) ys$)
+    nmap <leader>} ys$}
+
     nmap <leader>d :VimuxCloseRunner<CR>
 
   " Vroom Config {
