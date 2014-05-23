@@ -291,10 +291,13 @@
       nmap <leader>d :VimuxCloseRunner<CR>
 
     " vim-surround {
-      nmap <leader>" ys$"
       nmap <leader>' ys$'
+      nmap <leader>" ys$"
       nmap <leader>) ys$)
+      nmap <leader>} ys$}
     " }
+
+    nmap <leader>d :VimuxCloseRunner<CR>
 
     " Vroom Config {
       let g:vroom_use_vimux = 1

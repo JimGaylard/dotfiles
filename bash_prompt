@@ -15,7 +15,7 @@
        CYAN="\[\033[1;36m\]"
     MY_BLUE="\[\033[1;34m\]"
   LIGHT_RED="\[\033[1;31m\]"
-  DARK_GRAY="\[\033[1;32m\]"
+  DARK_GRAY="\[\033[1;30m\]"
       WHITE="\[\033[1;37m\]"
  LIGHT_GRAY="\[\033[0;36m\]"
      MY_RED="\[\033[0;31m\]"
@@ -102,15 +102,9 @@ function set_svn_branch {
 # Return the prompt symbol to use, colorized based on the return value of the
 # previous command.
 function set_prompt_symbol () {
-  ERROR_CODE=" "
   if test $1 -eq 0 ; then
-      if [ "$AWS_ENVIRONMENT" == "" ]; then
-        PROMPT_SYMBOL=${GREEN}"^_^"${COLOR_NONE}
-      else
-        PROMPT_SYMBOL="${CYAN}^_^${COLOR_NONE}"
-      fi
+    PROMPT_SYMBOL=${GREEN}"^_^"${COLOR_NONE}
   else
-    ERROR_CODE="${RED}ERROR: $1${COLOR_NONE} "
     PROMPT_SYMBOL="${RED}0_o${COLOR_NONE}"
   fi
 }
@@ -157,7 +151,7 @@ ${DARK_GRAY}this is a blank line${COLOR_NONE}\n\
 ${BLUE}\u@\h${COLOR_NONE} \
 ${YELLOW}($(parse_ruby_version))${COLOR_NONE}\
 ${BRANCH} \
-${ERROR_CODE}\
+${YELLOW}${AWS_ENVIRONMENT}${COLOR_NONE} \
 ${LIGHT_GRAY}\w${COLOR_NONE}\n\
 ${PROMPT_SYMBOL}
 _EOF_
