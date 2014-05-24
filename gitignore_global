@@ -10,3 +10,4 @@ rdoc
 tmp
 TODO*
 .DS_Store
+*.swp
