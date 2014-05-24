@@ -5,3 +5,4 @@
 [ -e /usr/local/share/chruby/auto.sh ] && source /usr/local/share/chruby/auto.sh
 
 PATH=$PATH:/Users/jimg/Library/Python/2.7/bin
+export GOPATH=/Users/jimg/workspace/go
