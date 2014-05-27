@@ -28,6 +28,8 @@
   set mousehide               " Hide the mouse cursor while typing
   scriptencoding utf-8
 
+  set ttimeoutlen=10
+
   if has ('x') && has ('gui') " On Linux use + register for copy-paste
       set clipboard=unnamedplus
   else           " On mac and Windows, use * register for copy-paste
