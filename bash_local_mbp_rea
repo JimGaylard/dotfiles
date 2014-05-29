@@ -32,8 +32,6 @@ export ARCHFLAGS="-arch x86_64"
 
 alias sed=gsed
 
-alias updatedb='sudo /usr/libexec/locate.updatedb'
-
 alias rssh='rea-ec2-ssh'
 
 alias tmux='TERM=xterm-256color tmux -2'
