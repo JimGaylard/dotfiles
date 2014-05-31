@@ -144,6 +144,7 @@
     nmap ,gl :Git pull --rebase
 
     nmap ,t :!ctags -R .<CR>
+    nmap ,rt :!ripper-tags -R<CR>
     "autocmd BufWritePost *.rb,*.js silent! !/usr/local/bin/ctags -R 2> /dev/null &
 
     map <C-J> <C-W>j
