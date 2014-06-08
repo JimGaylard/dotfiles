@@ -4,5 +4,7 @@
 
 [ -e /usr/local/share/chruby/auto.sh ] && source /usr/local/share/chruby/auto.sh
 
+[ -e /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
+
 PATH=$PATH:/Users/jimg/Library/Python/2.7/bin
 export GOPATH=/Users/jimg/workspace/go

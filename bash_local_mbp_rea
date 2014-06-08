@@ -4,6 +4,8 @@
 
 [ -e /usr/local/share/chruby/auto.sh ] && source /usr/local/share/chruby/auto.sh
 
+[ -e /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
+
 export PATH=$PATH:/usr/local/share/npm/bin
 # call 'gitx .' from any dir
 export PATH=$PATH:/Applications/GitX.app/Contents/Resources
