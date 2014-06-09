@@ -34,5 +34,18 @@ function success {
 }
 
 function aws_credentials {
-  eval $(gpg -d $1)
+  if [ -e $1 ]
+  then
+    file=$1
+  else
+    file="$HOME/.aws/$1"
+  fi
+  eval $(gpg -d $file)
 }
+
+# bash_completion for aws_credentials
+_aws_creds() {
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=( $(compgen -W  "$(ls ~/.aws)"  -- $cur) )
+}
+complete -F _aws_creds aws_credentials
