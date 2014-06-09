@@ -1,0 +1,5 @@
+_aws_creds() {
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=( $(compgen -W  "$(find ~/.aws -name '*.gpg')"  -- $cur) )
+}
+complete -F _aws_creds aws_credentials

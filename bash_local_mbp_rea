@@ -6,6 +6,8 @@
 
 [ -e /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
 
+[ -d ~/.bash_completion.d ] && for file in ~/.bash_completion.d/*; do source $file; done
+
 export PATH=$PATH:/usr/local/share/npm/bin
 # call 'gitx .' from any dir
 export PATH=$PATH:/Applications/GitX.app/Contents/Resources
