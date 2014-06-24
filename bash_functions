@@ -49,3 +49,11 @@ _aws_creds() {
     COMPREPLY=( $(compgen -W  "$(ls ~/.aws)"  -- $cur) )
 }
 complete -F _aws_creds aws_credentials
+
+clean_docker_images() {
+  docker images --no-trunc | grep none | awk '{print $3}' | xargs docker rmi
+}
+
+clean_docker_containers() {
+  docker ps -aq | xargs docker rm
+}
