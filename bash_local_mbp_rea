@@ -17,8 +17,6 @@ export PATH=$PATH:/Applications/GitX.app/Contents/Resources
 /usr/local/bin/keychain \
   $HOME/.ssh/id_rsa \
   $HOME/.ssh/id_rsa2 \
-  $HOME/.ssh/id_rsa_minthome \
-  $HOME/.ssh/utah-corp-ap-southeast-2.pem \
   > /dev/null
 
 source $HOME/.keychain/$HOSTNAME-sh
@@ -53,6 +51,6 @@ export CP_DOMAIN_ENV=development
 ulimit -n 8192
 
 # connect docker client to VM
-export DOCKER_HOST=tcp://localhost:4243
+export DOCKER_HOST=tcp://192.168.59.103:2375
 export AWS_DEFAULT_REGION=ap-southeast-2
 export AWS_REGION=ap-southeast-2
