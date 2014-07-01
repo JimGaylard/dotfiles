@@ -1,5 +1,7 @@
 tags
 *.swp
+*.swn
+*.swo
 .idea/
 .bundle
 .config
