@@ -269,7 +269,7 @@
 
     " Fugitive {
         nnoremap <silent> <leader>gs :Gstatus<CR>
-        nnoremap <silent> <leader>gd :Gdiff<CR>
+        nnoremap <silent> <leader>gd :Gvdiff<CR>
         nnoremap <silent> <leader>gc :Gcommit -v<CR>
         nnoremap <silent> <leader>gb :Gblame<CR>
         nnoremap <silent> <leader>gl :Glog<CR>
