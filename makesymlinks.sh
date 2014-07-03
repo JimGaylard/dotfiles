@@ -36,3 +36,6 @@ for file in $files; do
     ln -sv $dir/$file ~/.$file
 done
 
+
+# Any other business:
+[ ! grep 'no-document' ~/.gemrc ] && echo 'gem: --no-document' >> ~/.gemrc
