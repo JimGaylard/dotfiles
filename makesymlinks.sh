@@ -16,14 +16,9 @@ files="bashrc bash_profile bash_functions gitignore_global pryrc \
 
 ##########
 
-# clone vundle for vim
-echo "cloning vundle to ~/.vim/bundle/vundle"
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-echo "done..."
-
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
-mkdir -p $olddir
+mkdir $olddir
 echo "...done"
 
 # move any existing dotfiles in homedir to dotfiles_old
