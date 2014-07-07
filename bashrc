@@ -38,7 +38,9 @@ PROMPT="\u@\h:\w\$(__git_ps1 ' [%s]')\n\$ "
 PS1="$TITLEBAR\[\e[32;1m\]$PROMPT\[\e[0m\]"
 
 [ -e ~/.bash_prompt ] && source ~/.bash_prompt
-export PROMPT_COMMAND="$PROMPT_COMMAND; history -a"
+[ PROMPT_COMMAND ] && \
+  export PROMPT_COMMAND="$PROMPT_COMMAND; history -a" || \
+  PROMPT_COMMAND="history -a"
 
 alias ll='ls -lG'
 alias l='ls -alGF'

@@ -11,7 +11,7 @@ set -e
 dir="$HOME/dotfiles"                         # dotfiles directory
 olddir="$HOME/dotfiles_old$(date +'%y%m%d%H%M')" # old dotfiles backup directory
 # list of files/folders to symlink in homedir
-files="bashrc bash_profile bash_functions gitignore_global pryrc \
+files="bashrc bash_profile bash_functions bash_prompt gitignore_global pryrc \
        tmux.conf vimrc vimrc.bundles"
 
 ##########
