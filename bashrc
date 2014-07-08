@@ -54,4 +54,4 @@ alias gpp='git pull --rebase && git push'
 
 alias sshjump='ssh -t -A deploy ssh'
 
-alias vi=/usr/local/bin/vim
+alias vi=$(which vim)
