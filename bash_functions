@@ -51,7 +51,7 @@ _aws_creds() {
 complete -F _aws_creds aws_credentials
 
 clean_docker_images() {
-  docker images --no-trunc | grep none | awk '{print $3}' | xargs docker rmi
+  docker images --no-trunc | grep none | awk '{print $3}' | xargs docker rmi -f
 }
 
 clean_docker_containers() {
