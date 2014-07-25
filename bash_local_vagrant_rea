@@ -17,7 +17,6 @@ export CP_DOMAIN_ENV=development
 #export AA_ENVIRONMENT=development
 #export CP_AUTH_SSO_ENV=development
 #export SHARED_COMPONENTS_ENV=development
-ulimit -n 8192
 
 export AWS_DEFAULT_REGION=ap-southeast-2
 export AWS_REGION=ap-southeast-2
