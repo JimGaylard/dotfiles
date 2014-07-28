@@ -1,6 +1,15 @@
 #!/bin/bash
 [ -e /usr/local/etc/bash_completion ] && source /etc/bash_completion
 
+### START-Keychain ###
+# Let  re-use ssh-agent and/or gpg-agent between logins
+/usr/bin/keychain \
+  $HOME/.ssh/id_rsa \
+  $HOME/.ssh/id_rsa2 \
+  > /dev/null
+
+source $HOME/.keychain/$HOSTNAME-sh
+
 export ARCHFLAGS="-arch x86_64"
 
 alias rssh='rea-ec2-ssh'
