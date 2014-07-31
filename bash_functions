@@ -57,3 +57,7 @@ clean_docker_images() {
 clean_docker_containers() {
   docker ps -aq | xargs docker rm
 }
+
+docker_killall() {
+  docker kill $( docker ps -q )
+}
