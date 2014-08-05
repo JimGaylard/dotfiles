@@ -230,14 +230,6 @@
       let g:enable_numbers = 0
     " }
 
-    " RainbowParentheses {
-
-      au VimEnter * RainbowParenthesesToggle
-      au Syntax * RainbowParenthesesLoadRound
-      au Syntax * RainbowParenthesesLoadSquare
-      au Syntax * RainbowParenthesesLoadBraces
-    " }
-
     " Tabularize {
         nmap <Leader>a& :Tabularize /&<CR>
         vmap <Leader>a& :Tabularize /&<CR>
@@ -255,6 +247,7 @@
 
     " JSON {
         nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
+        let g:vim_json_syntax_conceal = 0
     " }
 
     " ctrlp {
