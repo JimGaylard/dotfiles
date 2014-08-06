@@ -51,7 +51,6 @@
   color solarized                 " Load a colorscheme
   let g:solarized_termcolors=256
 
-  set cursorline                  " Highlight current line
   set noshowmode
 
   highlight clear SignColumn      " SignColumn should match background for
