@@ -24,8 +24,6 @@
   endif
   filetype plugin indent on   " Automatically detect file types.
   syntax on                   " Syntax highlighting
-  set mouse=a                 " Automatically enable mouse usage
-  set mousehide               " Hide the mouse cursor while typing
   scriptencoding utf-8
 
   set ttimeoutlen=10
@@ -87,7 +85,6 @@
 
   set backspace=indent,eol,start  " Backspace for dummies
   set linespace=0                 " No extra spaces between rows
-  set nu                          " Line numbers on
   set showmatch                   " Show matching brackets/parenthesis
   set incsearch                   " Find as you type search
   set hlsearch                    " Highlight search terms
