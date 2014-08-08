@@ -61,3 +61,7 @@ clean_docker_containers() {
 docker_killall() {
   docker kill $( docker ps -q )
 }
+
+tmnew() {
+  tmux new-session -s $1
+}
