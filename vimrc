@@ -119,27 +119,23 @@
 " Key (re)Mappings {
     inoremap jk <Esc>
 
-    nmap <leader>v :tabedit $MYVIMRC<CR>
-    nmap <leader>map :TBrowseOutput map<CR>
+    nnoremap <leader>v :tabedit $MYVIMRC<CR>
+    nnoremap <leader>map :TBrowseOutput map<CR>
 
-    nmap / /\v
+    nnoremap / /\v
 
-    nmap <leader>b Orequire 'pry'; binding.pry<Esc>
-
-    nmap <leader>= gg=G
+    nnoremap <leader>b Orequire 'pry'; binding.pry<Esc>
 
     nnoremap <leader>p :set invpaste<CR>
-    nmap <leader>w mp:%s/\s\+$/<CR>'p
+    nnoremap <leader>w mp:%s/\s\+$/<CR>'p
 
     nnoremap <leader>n :NumbersToggle<CR>
 
-    nmap ,cf :let @*=expand("%")<CR>
-    nmap ,cp :let @*=expand("%:p")<CR>
+    nnoremap ,cf :let @*=expand("%")<CR>
+    nnoremap ,cp :let @*=expand("%:p")<CR>
 
-    nmap ,gl :Git pull --rebase
-
-    nmap ,t :!ctags -R .<CR>
-    nmap ,rt :!ripper-tags -R<CR>
+    nnoremap ,t :!ctags -R .<CR>
+    nnoremap ,rt :!ripper-tags -R<CR>
     "autocmd BufWritePost *.rb,*.js silent! !/usr/local/bin/ctags -R 2> /dev/null &
 
     map <C-J> <C-W>j
@@ -170,7 +166,7 @@
     nnoremap Y y$
 
     " Toggle search highlighting
-    nmap <silent> <leader>/ :let @/ = ""<CR>
+    nnoremap <silent> <leader>/ :let @/ = ""<CR>
 
     " Visual shifting (does not exit Visual mode)
     vnoremap < <gv
@@ -188,7 +184,7 @@
 
     " Map <Leader>ff to display all lines with keyword under cursor
     " and ask which one to jump to
-    nmap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
+    nnoremap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 
     " Easier horizontal scrolling
     map zl zL
@@ -242,7 +238,7 @@
     " }
 
     " JSON {
-        nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
+        nnoremap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
         let g:vim_json_syntax_conceal = 0
     " }
 
@@ -279,7 +275,7 @@
       let g:indent_guides_enable_on_vim_startup = 0
     " }
 
-      nmap <leader>d :VimuxCloseRunner<CR>
+      nnoremap <leader>d :VimuxCloseRunner<CR>
 
     " vim-surround {
       nmap <leader>' ys$'
@@ -287,8 +283,6 @@
       nmap <leader>) ys$)
       nmap <leader>} ys$}
     " }
-
-    nmap <leader>d :VimuxCloseRunner<CR>
 
     " Vroom Config {
       let g:vroom_use_vimux = 1
