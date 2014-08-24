@@ -1,5 +1,5 @@
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
 "Plugin 'briancollins/vim-jst'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ekalinin/Dockerfile.vim'
