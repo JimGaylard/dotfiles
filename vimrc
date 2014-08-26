@@ -57,7 +57,7 @@
                                   " Things like vim-gitgutter will match LineNr highlight
   highlight clear CursorLineNr   " Remove highlight color from current line number
 
-  "set textwidth=80
+  set colorcolumn=80
   set colorcolumn=+1
 
   if has('cmdline_info')
