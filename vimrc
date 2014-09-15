@@ -199,25 +199,6 @@
       let g:gist_post_private = 1
     "}
 
-    " NerdTree {
-      map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
-      map <leader>e :NERDTreeFind<CR>
-
-      let NERDTreeShowLineNumbers=0
-      let NERDTreeShowBookmarks=1
-      let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
-      let NERDTreeChDirMode=0
-      let NERDTreeQuitOnOpen=1
-      let NERDTreeMouseMode=2
-      let NERDTreeShowHidden=1
-      let NERDTreeKeepTreeInNewTab=1
-    " }
-
-    " Numbers.vim {
-      let g:numbers_exclude = ['nerdtree']
-      let g:enable_numbers = 0
-    " }
-
     " Tabularize {
         nmap <Leader>a& :Tabularize /&<CR>
         vmap <Leader>a& :Tabularize /&<CR>
@@ -279,14 +260,6 @@
       nmap <leader>" ys$"
       nmap <leader>) ys$)
       nmap <leader>} ys$}
-    " }
-
-    " Vroom Config {
-      let g:vroom_use_vimux = 1
-      let g:vroom_cucumber_path = "cucumber"
-      let g:vroom_rspec_command = "rspec "
-
-      let g:vimuxOrientation = "v"
     " }
 
 " }
