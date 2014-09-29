@@ -194,31 +194,6 @@
       set tags=tags,./tags;/,~/.vimtags
     " }
 
-    "gist-vim {
-      let g:github_user = "JimGaylard"
-      let g:gist_post_private = 1
-    "}
-
-    " Tabularize {
-        nmap <Leader>a& :Tabularize /&<CR>
-        vmap <Leader>a& :Tabularize /&<CR>
-        nmap <Leader>a= :Tabularize /=<CR>
-        vmap <Leader>a= :Tabularize /=<CR>
-        nmap <Leader>a: :Tabularize /:<CR>
-        vmap <Leader>a: :Tabularize /:<CR>
-        nmap <Leader>a:: :Tabularize /:\zs<CR>
-        vmap <Leader>a:: :Tabularize /:\zs<CR>
-        nmap <Leader>a, :Tabularize /,<CR>
-        vmap <Leader>a, :Tabularize /,<CR>
-        nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
-        vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
-    " }
-
-    " JSON {
-        nnoremap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
-        let g:vim_json_syntax_conceal = 0
-    " }
-
     " ctrlp {
         let g:ctrlp_working_path_mode = 'ra'
         nnoremap <silent> <D-t> :CtrlP<CR>
@@ -240,11 +215,10 @@
         nnoremap <silent> <leader>gg :GitGutterToggle<CR>
     "}
 
-    " UndoTree {
-        nnoremap <Leader>u :UndotreeToggle<CR>
-        " If undotree is opened, it is likely one wants to interact with it.
-        let g:undotree_SetFocusWhenToggle=1
-    " }
+    "gist-vim {
+      let g:github_user = "JimGaylard"
+      let g:gist_post_private = 1
+    "}
 
     " indent_guides {
       let g:indent_guides_auto_colors = 1
@@ -253,13 +227,45 @@
       let g:indent_guides_enable_on_vim_startup = 0
     " }
 
-      nnoremap <leader>d :VimuxCloseRunner<CR>
+    " JSON {
+        nnoremap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
+        let g:vim_json_syntax_conceal = 0
+    " }
+
+    " RainbowParentheses {
+
+      au VimEnter * RainbowParenthesesToggle
+      au Syntax * RainbowParenthesesLoadRound
+      au Syntax * RainbowParenthesesLoadSquare
+      au Syntax * RainbowParenthesesLoadBraces
+    " }
+
+    " Tabularize {
+        nmap <Leader>a& :Tabularize /&<CR>
+        vmap <Leader>a& :Tabularize /&<CR>
+        nmap <Leader>a= :Tabularize /=<CR>
+        vmap <Leader>a= :Tabularize /=<CR>
+        nmap <Leader>a: :Tabularize /:<CR>
+        vmap <Leader>a: :Tabularize /:<CR>
+        nmap <Leader>a:: :Tabularize /:\zs<CR>
+        vmap <Leader>a:: :Tabularize /:\zs<CR>
+        nmap <Leader>a, :Tabularize /,<CR>
+        vmap <Leader>a, :Tabularize /,<CR>
+        nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+        vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+    " }
 
     " vim-surround {
       nmap <leader>' ys$'
       nmap <leader>" ys$"
       nmap <leader>) ys$)
       nmap <leader>} ys$}
+    " }
+
+    " UndoTree {
+        nnoremap <Leader>u :UndotreeToggle<CR>
+        " If undotree is opened, it is likely one wants to interact with it.
+        let g:undotree_SetFocusWhenToggle=1
     " }
 
 " }
