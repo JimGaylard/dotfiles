@@ -37,7 +37,7 @@
   "set autowrite                       " Automatically write a file when leaving a modified buffer
   set shortmess+=filmnrxoOtTI          " Abbrev. of messages (avoids 'hit enter')
   set history=1000                    " Store a ton of history (default is 20)
-  set spell                           " Spell checking on
+  set nospell                           " Spell checking on
   set hidden                          " Allow buffer switching without saving
 " }
 
