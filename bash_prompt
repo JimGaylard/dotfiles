@@ -111,7 +111,11 @@ function set_prompt_symbol () {
 
 
 function parse_ruby_version {
-  ruby -v | cut -d" " -f1,2
+  if [ "$(which ruby)" != "" ]; then
+    ruby -v | cut -d" " -f1,2
+  else
+    echo "no ruby"
+  fi
 }
 
 # Set the full bash prompt.
