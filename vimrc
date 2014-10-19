@@ -204,6 +204,10 @@
 
     "}
 
+    " Fireplace {
+        nnoremap <leader>e :Eval<CR>
+    "}
+
     " Fugitive {
         nnoremap <silent> <leader>gs :Gstatus<CR>
         nnoremap <silent> <leader>gd :Gvdiff<CR>
