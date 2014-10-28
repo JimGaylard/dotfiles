@@ -101,8 +101,8 @@
   set expandtab                   " Tabs are spaces, not tabs
   set matchpairs+=<:>             " Match, to be used with %
   set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
-  " Remove trailing whitespaces and ^M chars
   autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
+  " Remove trailing whitespaces and newline chars
   autocmd FileType c,cpp,java,go,php,javascript,ruby,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
   autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
@@ -113,8 +113,6 @@
 " }
 
 " Key (re)Mappings {
-    inoremap jk <Esc>
-
     nnoremap <leader>v :tabedit $MYVIMRC<CR>
     nnoremap <leader>map :TBrowseOutput map<CR>
 
@@ -163,17 +161,6 @@
 
     " Toggle search highlighting
     nnoremap <silent> <leader>/ :let @/ = ""<CR>
-
-    " Visual shifting (does not exit Visual mode)
-    vnoremap < <gv
-    vnoremap > >gv
-
-    "" Fix home and end keybindings for screen, particularly on mac
-    "" - for some reason this fixes the arrow keys too. huh.
-    "map [F $
-    "imap [F $
-    "map [H g0
-    "imap [H g0
 
     " For when you forget to sudo.. Really Write the file.
     cmap w!! w !sudo tee % >/dev/null
