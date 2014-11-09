@@ -6,6 +6,8 @@
 
 [ -e /usr/local/share/chruby/auto.sh ] && source /usr/local/share/chruby/auto.sh
 
+export PATH=$PATH:/usr/local/go/bin
+
 load_keychain() {
   /usr/bin/keychain \
     $HOME/.ssh/id_rsa \

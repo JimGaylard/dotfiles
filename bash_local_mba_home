@@ -6,5 +6,5 @@
 
 [ -e /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
 
-PATH=$PATH:/usr/local/go/bin
-export GOPATH=/home/vagrant/workspace/golang
+PATH=$PATH:/Users/jimg/Library/Python/2.7/bin
+export GOPATH=/Users/jimg/workspace/go
