@@ -62,6 +62,10 @@ docker_killall() {
   docker kill $( docker ps -q )
 }
 
+docker_ip() {
+  docker inspect --format='{{ .NetworkSettings.IPAddress }}' $1
+}
+
 tmnew() {
   tmux new-session -s $1
 }
