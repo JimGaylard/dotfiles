@@ -104,7 +104,6 @@
   " Remove trailing whitespaces and ^M chars
   autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
   autocmd FileType c,cpp,java,go,php,javascript,ruby,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
-  autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
   autocmd BufRead,BufNewFile *.log set filetype=log
   autocmd BufRead,BufNewFile */log/* set filetype=log
@@ -164,10 +163,6 @@
     " Toggle search highlighting
     nnoremap <silent> <leader>/ :let @/ = ""<CR>
 
-    " Visual shifting (does not exit Visual mode)
-    vnoremap < <gv
-    vnoremap > >gv
-
     "" Fix home and end keybindings for screen, particularly on mac
     "" - for some reason this fixes the arrow keys too. huh.
     "map [F $
@@ -202,6 +197,10 @@
             \ 'dir':  '\.git$\|\.hg$\|\.svn$',
             \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
 
+    "}
+
+    " Fireplace {
+        nnoremap <leader>e :Eval<CR>
     "}
 
     " Fugitive {

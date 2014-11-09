@@ -1,6 +1,7 @@
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'ervandew/supertab'
+Plugin 'fatih/vim-go'
 Plugin 'gmarik/vundle'
 Plugin 'godlygeek/tabular'
 Plugin 'guns/vim-clojure-static'
