@@ -1,6 +1,3 @@
-
-
-
 " Basics {
   set nocompatible        " Must be first line
 
