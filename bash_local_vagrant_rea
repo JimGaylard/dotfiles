@@ -1,6 +1,4 @@
 #!/bin/bash
-[ -e /usr/local/etc/bash_completion ] && source /etc/bash_completion
-
 [ -e /usr/local/share/chruby/chruby.sh ] && source /usr/local/share/chruby/chruby.sh \
   && chruby 2
 
@@ -18,6 +16,13 @@ load_keychain() {
 export ARCHFLAGS="-arch x86_64"
 
 alias rssh='rea-ec2-ssh'
+alias jim-cpdev='rea-assuming -u jgaylard cpdev-Developer'
+alias jim-cpdevAdmin='rea-assuming -u jgaylard cpdev-Administrator'
+alias jim-cops='rea-assuming -u jgaylard COPS-dev-NormalUser'
+alias jim-prod='rea-assuming -u jgaylard Shared-Prod-NormalUser'
+alias jim-muppets='rea-assuming -u jgaylard Muppets-Dev-Role'
+alias jim-gandalf='rea-assuming -u jgaylard Gandalf-Dev-Role'
+alias jim-staging='rea-assuming -u jgaylard Shared-Staging-NormalUser'
 
 
 # Get cukes and specs passing faster for cp-agentadmin and  cp-domain
@@ -33,3 +38,6 @@ export CP_DOMAIN_ENV=development
 
 export AWS_DEFAULT_REGION=ap-southeast-2
 export AWS_REGION=ap-southeast-2
+
+export GOPATH=/home/vagrant/workspace/go
+export PATH=$PATH:/usr/local/go/bin

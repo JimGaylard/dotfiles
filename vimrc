@@ -114,9 +114,6 @@
 
     nnoremap / /\v
 
-    nnoremap <leader>b :CtrlPBuffer<CR>
-
-
     nnoremap <leader>p :set invpaste<CR>
     nnoremap <leader>w mp:%s/\s\+$/<CR>'p
 
@@ -181,6 +178,7 @@
     " ctrlp {
         let g:ctrlp_working_path_mode = 'ra'
         nnoremap <silent> <D-t> :CtrlP<CR>
+        nnoremap <leader>b :CtrlPBuffer<CR>
         let g:ctrlp_custom_ignore = {
             \ 'dir':  '\.git$\|\.hg$\|\.svn$',
             \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
