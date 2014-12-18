@@ -40,4 +40,4 @@ export AWS_DEFAULT_REGION=ap-southeast-2
 export AWS_REGION=ap-southeast-2
 
 export GOPATH=/home/vagrant/workspace/go
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
