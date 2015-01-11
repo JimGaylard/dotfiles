@@ -29,7 +29,7 @@ source $HOME/.keychain/$HOSTNAME-sh-gpg
 # brew install curl-ca-bundle
 #
 # http://railsapps.github.io/openssl-certificate-verify-failed.html
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+#export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 export ARCHFLAGS="-arch x86_64"
 
 alias sed=gsed
