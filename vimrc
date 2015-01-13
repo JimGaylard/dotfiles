@@ -114,7 +114,9 @@
 
     nnoremap / /\v
 
-    nnoremap <leader>p :set invpaste<CR>
+    nnoremap <leader>p :set paste<CR>
+    nnoremap <leader>np :set nopaste<CR>
+
     nnoremap <leader>w mp:%s/\s\+$/<CR>'p
 
     nnoremap <leader>n :NumbersToggle<CR>
