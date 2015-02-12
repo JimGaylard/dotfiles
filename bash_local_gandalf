@@ -1,5 +1,0 @@
-#!/bin/bash
-[ -e /usr/local/share/chruby/chruby.sh ] && source /usr/local/share/chruby/chruby.sh \
-  && chruby ruby-2.0
-
-[ -e /usr/local/share/chruby/auto.sh ] && source /usr/local/share/chruby/auto.sh
