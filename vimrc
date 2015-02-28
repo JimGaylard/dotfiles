@@ -87,6 +87,8 @@
   set list                        " Higlights whitespace etc.
   set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
+  autocmd Filetype go setlocal listchars=tab:\ \ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
+
 " }
 
 
