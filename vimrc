@@ -13,6 +13,8 @@
 
 " General {
 
+  set noswapfile
+
   let mapleader = ','
 
   set background=dark         " Assume a dark background
