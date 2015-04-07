@@ -66,6 +66,10 @@ docker_ip() {
   docker inspect --format='{{ .NetworkSettings.IPAddress }}' $1
 }
 
+docker_latest() {
+  docker images | grep latest | sort
+}
+
 tmnew() {
   tmux new-session -s $1
 }
