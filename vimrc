@@ -27,11 +27,11 @@
 
   set ttimeoutlen=10
 
-  if has ('x') && has ('gui') " On Linux use + register for copy-paste
-      set clipboard=unnamedplus
-  else           " On mac and Windows, use * register for copy-paste
-      set clipboard=unnamed
-  endif
+  "if has ('x') && has ('gui') " On Linux use + register for copy-paste
+  "    set clipboard=unnamedplus
+  "else           " On mac and Windows, use * register for copy-paste
+  "    set clipboard=unnamed
+  "endif
 
   "set autowrite                       " Automatically write a file when leaving a modified buffer
   set shortmess+=filmnrxoOtTI          " Abbrev. of messages (avoids 'hit enter')
