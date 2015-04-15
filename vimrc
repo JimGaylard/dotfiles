@@ -110,6 +110,9 @@
   autocmd BufRead,BufNewFile */log/* set filetype=log
   autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
+  " Use goimports instead of goformat
+  let g:go_fmt_command = "goimports"
+
 " }
 
 " Key (re)Mappings {
