@@ -132,7 +132,6 @@
     nnoremap ,cp :let @*=expand("%:p")<CR>
 
     nnoremap ,t :!ctags -R .<CR>
-    nnoremap ,rt :!ripper-tags -R<CR>
     "autocmd BufWritePost *.rb,*.js silent! !/usr/local/bin/ctags -R 2> /dev/null &
 
     map <C-J> <C-W>j
@@ -168,10 +167,6 @@
     " For when you forget to sudo.. Really Write the file.
     cmap w!! w !sudo tee % >/dev/null
 
-    " Map <Leader>ff to display all lines with keyword under cursor
-    " and ask which one to jump to
-    nnoremap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
-
     " Easier horizontal scrolling
     map zl zL
     map zh zH
@@ -183,16 +178,6 @@
     " Ctags {
       set tags=tags,./tags;/,~/.vimtags
     " }
-
-    " ctrlp {
-        let g:ctrlp_working_path_mode = 'ra'
-        nnoremap <silent> <D-t> :CtrlP<CR>
-        nnoremap <leader>b :CtrlPBuffer<CR>
-        let g:ctrlp_custom_ignore = {
-            \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-            \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
-
-    "}
 
     " Fireplace {
         nnoremap <leader>e :Eval<CR>
@@ -246,6 +231,25 @@
         vmap <Leader>a, :Tabularize /,<CR>
         nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
         vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+    " }
+
+    " Unite {
+      let g:unite_source_history_yank_enable = 1
+      call unite#filters#matcher_default#use(['matcher_fuzzy'])
+      nnoremap <C-P> :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/neovim:!<cr>
+      nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
+      nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
+      nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
+
+      " Custom mappings for the unite buffer
+      autocmd FileType unite call s:unite_settings()
+      function! s:unite_settings()
+        " Play nice with supertab
+        let b:SuperTabDisabled=1
+        " Enable navigation with control-j and control-k in insert mode
+        imap <buffer> <C-j>   <Plug>(unite_select_next_line)
+        imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+      endfunction<F37>
     " }
 
     " vim-surround {
