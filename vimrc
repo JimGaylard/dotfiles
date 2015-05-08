@@ -1,15 +1,19 @@
 " Basics {
   set nocompatible        " Must be first line
 
-  "correct setup for vundle
+  "correct setup for bundle
   filetype on
   filetype off
-  set rtp+=~/.vim/bundle/vundle
-  call vundle#rc()
+  set rtp+=~/.vim/bundle/neobundle.vim
+  call neobundle#begin(expand('~/.vim/bundle/'))
+
+  NeoBundleFetch 'Shougo/neobundle.vim'
 
 " }
 
   source ~/.vimrc.bundles
+
+  NeoBundleCheck
 
 " General {
 
