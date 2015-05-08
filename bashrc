@@ -27,7 +27,7 @@ set -o vi
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
 unset HISTFILESIZE
-export EDITOR=/usr/local/bin/vim
+export EDITOR=$(which vim)
 shopt -s histappend
 
 #if [ $TERM != "linux" ]; then
