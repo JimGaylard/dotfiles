@@ -78,12 +78,11 @@
     set laststatus=2
 
     " Broken down into easily includeable segments
-    set statusline=%<%f\                     " Filename
-    set statusline+=%w%h%m%r                 " Options
-    set statusline+=%{fugitive#statusline()} " Git Hotness
-    set statusline+=\ [%{&ff}/%Y]            " Filetype
-    set statusline+=\ [%{getcwd()}]          " Current dir
-    set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+    "set statusline= %h%w%m%r%{SL('CapsLockStatusline')}%y%{SL('fugitive#statusline')}%#ErrorMsg#%{SL('SyntasticStatuslineFlag')}%*%=%-14.(%l,%c%V%)\ %P
+    set statusline=%{fugitive#statusline()} " Git Hotness
+    set statusline+=\ %<%.55F\                     " Filename
+    set statusline+=%w%h%m%r%q                 " Options
+    set statusline+=%=%y\ %(%l,%c%V%)\ %p%%  " Right aligned file nav info
 
     set t_Co=256
     let g:airline_powerline_fonts=1
