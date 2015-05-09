@@ -50,6 +50,8 @@
   set history=1000                    " Store a ton of history (default is 20)
   set nospell                           " Spell checking on
   set hidden                          " Allow buffer switching without saving
+  set lazyredraw                      " Don't show macros while they're happening
+  set linebreak                       " Wrap but don't insert EOL
 " }
 
 " Vim UI {
