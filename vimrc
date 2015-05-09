@@ -1,19 +1,28 @@
 " Basics {
-  set nocompatible        " Must be first line
 
   "correct setup for bundle
   filetype on
   filetype off
   set rtp+=~/.vim/bundle/neobundle.vim
+
+  " Use git protocol.
+  let g:neobundle#types#git#default_protocol = 'git'
+
   call neobundle#begin(expand('~/.vim/bundle/'))
 
   NeoBundleFetch 'Shougo/neobundle.vim'
-
-" }
+  " Use neobundle standard recipes.
+  NeoBundle 'Shougo/neobundle-vim-recipes', {'force' : 1}
 
   source ~/.vimrc.bundles
+  call neobundle#end()
+
+  filetype plugin indent on   " Automatically detect file types.
 
   NeoBundleCheck
+" }
+
+
 
 " General {
 
@@ -25,7 +34,6 @@
   if !has('gui')
       "set term=$TERM          " Make arrow and other keys work
   endif
-  filetype plugin indent on   " Automatically detect file types.
   syntax on                   " Syntax highlighting
   scriptencoding utf-8
 
@@ -244,6 +252,7 @@
       nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
       nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
       nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
+      nnoremap <leader>nbu :<C-u>Unite neobundle/update<cr>
 
       " Custom mappings for the unite buffer
       autocmd FileType unite call s:unite_settings()
