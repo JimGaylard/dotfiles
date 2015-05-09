@@ -43,7 +43,8 @@ function set_bash_prompt () {
   read -r -d '' PROMPT_STRING <<-_EOF_
 ${DARK_GRAY}this is a blank line${COLOR_NONE}\n\
 ${BLUE}\u@\h${COLOR_NONE} \
-${YELLOW}\w${COLOR_NONE}\n\
+${YELLOW}\w${COLOR_NONE}\
+${LIGHT_RED}$(__git_ps1)${COLOR_NONE}\n\
 ${PROMPT_SYMBOL}
 _EOF_
 
