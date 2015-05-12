@@ -5,10 +5,6 @@ export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/bin:/sbin:~/bin:$
 [ -e ~/.bash_local ] && source ~/.bash_local
 [ -e ~/.bash_functions ] && source ~/.bash_functions
 
-# fallback to basic bash prompt if bash_prompt file not present
-# source git completion for git prompt
-[ -e /usr/local/etc/bash_completion.d/git-prompt.sh ] \
-  &&  source /usr/local/etc/bash_completion.d/git-prompt.sh
 
 if [ -e ~/.bash_prompt ]
 then
