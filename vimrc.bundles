@@ -19,7 +19,12 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'shougo/neobundle.vim'
 NeoBundle 'shougo/neomru.vim'
 NeoBundle 'shougo/unite.vim'
-NeoBundle 'shougo/vimproc.vim'
+NeoBundle 'shougo/vimproc.vim', {
+\ 'build' : {
+\     'linux' : 'make',
+\     'unix' : 'gmake'
+\    },
+\ }
 NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'tpope/vim-classpath'
 NeoBundle 'tpope/vim-cucumber'
@@ -31,6 +36,12 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Valloric/YouCompleteMe', {
+  \ 'build'      : {
+  \ 'linux'    : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+  \ 'unix'    : './install.sh --clang-completer --system-libclang --omnisharp-completer'
+  \ }
+\ }
 NeoBundle 'vim-scripts/ag.vim'
 NeoBundle 'vim-scripts/paredit.vim'
 NeoBundle 'vim-scripts/xoria256.vim'
