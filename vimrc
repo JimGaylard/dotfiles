@@ -87,8 +87,6 @@
     set statusline+=%=%y\ %(%l,%c%V%)\ %p%%  " Right aligned file nav info
 
     set t_Co=256
-    let g:airline_powerline_fonts=1
-    "let g:airline_theme='powerlineish'       " airline uses use the powerline theme
   endif
 
   set backspace=indent,eol,start  " Backspace for dummies
@@ -133,9 +131,6 @@
     nnoremap <leader>map :TBrowseOutput map<CR>
 
     nnoremap / /\v
-
-    nnoremap <leader>p :set paste<CR>
-    nnoremap <leader>np :set nopaste<CR>
 
     nnoremap <leader>w mp:%s/\s\+$/<CR>'p
 
