@@ -240,23 +240,21 @@
     " }
 
     " Unite {
-      let g:unite_source_history_yank_enable = 1
       call unite#filters#matcher_default#use(['matcher_fuzzy'])
-      nnoremap <C-P> :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/neovim:!<cr>
-      nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
+      call unite#filters#sorter_default#use(['sorter_rank'])
+      nnoremap <C-p> :Unite file file_rec/neovim:! bookmark file_mru -start-insert -no-split<cr>
+      let g:unite_source_history_yank_enable = 1
+      nnoremap <Leader>" :Unite history/yank<cr>
       nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
-      nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
-      nnoremap <leader>nbu :<C-u>Unite neobundle/update<cr>
-
-      " Custom mappings for the unite buffer
-      autocmd FileType unite call s:unite_settings()
-      function! s:unite_settings()
-        " Play nice with supertab
-        let b:SuperTabDisabled=1
-        " Enable navigation with control-j and control-k in insert mode
-        imap <buffer> <C-j>   <Plug>(unite_select_next_line)
-        imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
-      endfunction<F37>
+      " Search
+      let g:unite_source_grep_command = 'ag'
+      let g:unite_source_grep_default_opts =
+            \ '--line-numbers --nocolor --nogroup --hidden --ignore ' .
+            \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+      let g:unite_source_grep_recursive_opt = ''
+      nnoremap <Leader>ag :Unite grep:.<cr>
+      "nnoremap <Leader>t :Unite tag -start-insert -auto-preview<cr>
+      nnoremap <Leader>l :Unite line -start-insert<cr>
     " }
 
     " vim-surround {
