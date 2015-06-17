@@ -242,7 +242,7 @@
     " Unite {
       call unite#filters#matcher_default#use(['matcher_fuzzy'])
       call unite#filters#sorter_default#use(['sorter_rank'])
-      nnoremap <C-p> :Unite file file_rec/neovim:! bookmark file_mru -start-insert -no-split<cr>
+      nnoremap <C-p> :Unite file_rec/neovim:! -start-insert -no-split<cr>
       let g:unite_source_history_yank_enable = 1
       nnoremap <Leader>" :Unite history/yank<cr>
       nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
