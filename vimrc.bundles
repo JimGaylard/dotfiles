@@ -45,3 +45,8 @@ NeoBundle 'Valloric/YouCompleteMe', {
 NeoBundle 'vim-scripts/ag.vim'
 NeoBundle 'vim-scripts/paredit.vim'
 NeoBundle 'vim-scripts/xoria256.vim'
+
+NeoBundle 'eagletmt/ghcmod-vim'
+NeoBundle 'eagletmt/neco-ghc'
+NeoBundle 'bitc/vim-hdevtools'
+NeoBundle 'raichoo/haskell-vim'

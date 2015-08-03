@@ -101,6 +101,8 @@
   set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
   autocmd Filetype go setlocal listchars=tab:\ \ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
+  " Add .cabal (haskell) to PATH
+  let $PATH = $PATH . ':' . expand('~/.cabal/bin')
 
 " }
 
