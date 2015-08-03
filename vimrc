@@ -10,6 +10,9 @@
 
   call neobundle#begin(expand('~/.vim/bundle/'))
 
+  "YouCompleteMe is slow to update
+  let g:neobundle#install_process_timeout = 1800
+
   NeoBundleFetch 'Shougo/neobundle.vim'
   " Use neobundle standard recipes.
   NeoBundle 'Shougo/neobundle-vim-recipes', {'force' : 1}

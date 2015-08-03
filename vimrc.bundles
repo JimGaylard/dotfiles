@@ -36,7 +36,6 @@ NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-vinegar'
-NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'Valloric/YouCompleteMe', {
   \ 'build'      : {
   \ 'linux'    : './install.sh --clang-completer --system-libclang --omnisharp-completer',
