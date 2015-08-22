@@ -244,6 +244,12 @@
       vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
     " }
 
+    " UndoTree {
+        nnoremap <Leader>u :UndotreeToggle<CR>
+        " If undotree is opened, it is likely one wants to interact with it.
+        let g:undotree_SetFocusWhenToggle=1
+    " }
+
     " Unite {
       call unite#filters#matcher_default#use(['matcher_fuzzy'])
       call unite#filters#sorter_default#use(['sorter_rank'])
@@ -262,6 +268,10 @@
       nnoremap <Leader>l :Unite line -start-insert<cr>
     " }
 
+    " { vim-go
+      let g:go_fmt_fail_silently = 1
+    " }
+
     " vim-surround {
       nmap <leader>' ys$'
       nmap <leader>" ys$"
@@ -269,10 +279,8 @@
       nmap <leader>} ys$}
     " }
 
-    " UndoTree {
-        nnoremap <Leader>u :UndotreeToggle<CR>
-        " If undotree is opened, it is likely one wants to interact with it.
-        let g:undotree_SetFocusWhenToggle=1
+    " YouCompleteMe {
+      let g:ycm_add_preview_to_completeopt = 1
     " }
 
 " }
