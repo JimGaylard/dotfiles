@@ -1,3 +1,4 @@
+NeoBundle 'benmills/vimux'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'fatih/vim-go'

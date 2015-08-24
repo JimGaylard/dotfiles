@@ -30,6 +30,7 @@
 " General {
 
   set noswapfile
+  set exrc " use project vimrc
 
   let mapleader = ','
 
@@ -272,6 +273,12 @@
       let g:go_fmt_fail_silently = 1
     " }
 
+    " vimux {
+      nnoremap <leader>r :VimuxRunLastCommand<CR>
+      nnoremap <leader>s :VimuxRunCommand 'make test SPECS='.bufname("%").' OPTS=--fail-fast'<CR>
+      nnoremap <leader>z :VimuxZoomRunner<CR>
+    " }
+
     " vim-surround {
       nmap <leader>' ys$'
       nmap <leader>" ys$"
@@ -303,7 +310,11 @@
 
 " }
 
+let $GOPATH = "/home/vagrant/workspace/go"
+let $GOROOT = "/usr/local/go"
+
 " Added this line because of issues with crontab -e
 " has to do with the way vim treats backup files
 set backupskip=/tmp/*,/private/tmp/*
+set secure " don't run autocmd from untrusted project vimrc
 

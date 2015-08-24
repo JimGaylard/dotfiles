@@ -43,7 +43,7 @@ alias l='ls -alGF'
 alias la='ls -AG'
 
 alias be='bundle exec'
-alias gst='git status'
+alias gst='git status -s'
 alias gd='git diff'
 alias gco='git checkout'
 alias gpp='git pull --rebase && git push'
