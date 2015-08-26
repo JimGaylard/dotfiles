@@ -310,9 +310,6 @@
 
 " }
 
-let $GOPATH = "/home/vagrant/workspace/go"
-let $GOROOT = "/usr/local/go"
-
 " Added this line because of issues with crontab -e
 " has to do with the way vim treats backup files
 set backupskip=/tmp/*,/private/tmp/*
