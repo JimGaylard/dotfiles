@@ -259,7 +259,7 @@
       nnoremap <Leader>" :Unite history/yank<cr>
       nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
       " Search
-      let g:unite_source_grep_command = 'ag'
+      let g:unite_source_grep_command = 'ag -p .agignore'
       let g:unite_source_grep_default_opts =
             \ '--line-numbers --nocolor --nogroup --hidden --ignore ' .
             \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
