@@ -275,7 +275,7 @@
 
     " vimux {
       nnoremap <leader>r :VimuxRunLastCommand<CR>
-      nnoremap <leader>s :VimuxRunCommand 'make test SPECS='.bufname("%").' OPTS=--fail-fast'<CR>
+      nnoremap <leader>s :VimuxRunCommand ''<left>
       nnoremap <leader>z :VimuxZoomRunner<CR>
     " }
 
