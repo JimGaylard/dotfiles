@@ -30,3 +30,7 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -sv $dir/$file ~/.$file
 done
+
+mkdir -p ~/.config/nvim
+ln -s vimrc ~/.config/nvim/init.vim
+ln -s vimrc.bundles ~/.config/nvim/init.vim
