@@ -3,12 +3,12 @@
   "correct setup for bundle
   filetype on
   filetype off
-  set rtp+=~/.vim/bundle/neobundle.vim
+  set rtp+=~/.config/nvim/bundle/neobundle.vim
 
   " Use git protocol.
-  let g:neobundle#types#git#default_protocol = 'git'
+  let g:neobundle#types#git#default_protocol = 'ssh'
 
-  call neobundle#begin(expand('~/.vim/bundle/'))
+  call neobundle#begin(expand('~/.config/nvim/bundle/'))
 
   "YouCompleteMe is slow to update
   let g:neobundle#install_process_timeout = 1800
@@ -17,7 +17,7 @@
   " Use neobundle standard recipes.
   NeoBundle 'Shougo/neobundle-vim-recipes', {'force' : 1}
 
-  source ~/.vimrc.bundles
+  source ~/.config/nvim/vimrc.bundles
   call neobundle#end()
 
   filetype plugin indent on   " Automatically detect file types.
