@@ -32,5 +32,5 @@ for file in $files; do
 done
 
 mkdir -p ~/.config/nvim
-ln -s vimrc ~/.config/nvim/init.vim
-ln -s vimrc.bundles ~/.config/nvim/init.vim
+ln -s ~/dotfiles/vimrc ~/.config/nvim/init.vim
+ln -s ~/dotfiles/vimrc.bundles ~/.config/nvim/vimrc.bundles
