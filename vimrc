@@ -90,7 +90,6 @@
     set statusline+=%w%h%m%r%q                 " Options
     set statusline+=%=%y\ %(%l,%c%V%)\ %p%%  " Right aligned file nav info
 
-    set t_Co=256
   endif
 
   set backspace=indent,eol,start  " Backspace for dummies

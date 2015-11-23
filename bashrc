@@ -39,15 +39,12 @@ PS1="$TITLEBAR\[\e[32;1m\]$PROMPT\[\e[0m\]"
   PROMPT_COMMAND="history -a"
 
 alias ll='ls -lG'
-alias l='ls -alGF'
-alias la='ls -AG'
+alias l='ls -laF'
+
+alias ty='tmux loadb -'
 
 alias be='bundle exec'
 alias gst='git status -s'
 alias gd='git diff'
-alias gco='git checkout'
-alias gpp='git pull --rebase && git push'
-
-alias sshjump='ssh -t -A deploy ssh'
 
 alias vi=$(which vim)
