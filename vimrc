@@ -186,6 +186,7 @@
 
     " vim-go maps
     au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+    au FileType go nmap <Leader>gr :GoRename 
 
 " }
 
