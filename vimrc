@@ -227,6 +227,11 @@
         let g:vim_json_syntax_conceal = 0
     " }
 
+    " Neomake {
+        autocmd! BufWritePost * Neomake
+        autocmd! BufRead * Neomake
+    " }
+
     " RainbowParentheses {
 
       au VimEnter * RainbowParenthesesToggle
