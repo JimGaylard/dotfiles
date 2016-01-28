@@ -283,13 +283,6 @@
       nnoremap <leader>z :VimuxZoomRunner<CR>
     " }
 
-    " vim-surround {
-      nmap <leader>' ys$'
-      nmap <leader>" ys$"
-      nmap <leader>) ys$)
-      nmap <leader>} ys$}
-    " }
-
     " YouCompleteMe {
       let g:ycm_add_preview_to_completeopt = 1
     " }
