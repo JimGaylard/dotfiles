@@ -262,19 +262,8 @@
     " Unite {
       call unite#filters#matcher_default#use(['matcher_fuzzy'])
       call unite#filters#sorter_default#use(['sorter_rank'])
-      nnoremap <C-p> :Unite file_rec/neovim:! -start-insert -no-split<cr>
-      let g:unite_source_history_yank_enable = 1
-      nnoremap <Leader>" :Unite history/yank<cr>
+      nnoremap <C-p> :Unite -start-insert -no-split file_rec/git<cr>
       nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
-      " Search
-      let g:unite_source_grep_command = 'ag -p .agignore'
-      let g:unite_source_grep_default_opts =
-            \ '--line-numbers --nocolor --nogroup --hidden --ignore ' .
-            \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
-      let g:unite_source_grep_recursive_opt = ''
-      nnoremap <Leader>ag :Unite grep:.<cr>
-      "nnoremap <Leader>t :Unite tag -start-insert -auto-preview<cr>
-      nnoremap <Leader>l :Unite line -start-insert<cr>
     " }
 
     " { vim-go
