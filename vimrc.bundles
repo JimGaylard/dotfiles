@@ -1,4 +1,3 @@
-NeoBundle 'benekastah/neomake'
 NeoBundle 'benmills/vimux'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'ekalinin/Dockerfile.vim'
@@ -18,6 +17,7 @@ NeoBundle 'ngmy/vim-rubocop'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'quentindecock/vim-cucumber-align-pipes'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'shougo/neobundle.vim'
 NeoBundle 'shougo/unite.vim'
 NeoBundle 'shougo/vimproc.vim', {
