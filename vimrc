@@ -257,6 +257,7 @@
     " Unite {
       call unite#filters#matcher_default#use(['matcher_fuzzy'])
       call unite#filters#sorter_default#use(['sorter_rank'])
+      call unite#custom#source('file_rec/git', 'ignore_pattern', 'vendor')
       nnoremap <C-p> :Unite -start-insert -no-split file_rec/git<cr>
       nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
     " }
