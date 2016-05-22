@@ -188,6 +188,7 @@
     " vim-go maps
     au FileType go nmap <Leader>dt <Plug>(go-def-tab)
     au FileType go nmap <Leader>gr :GoRename 
+    au FileType go nmap <Leader>gm :GoMetaLinter<CR>
 
 " }
 
@@ -236,6 +237,11 @@
       au Syntax * RainbowParenthesesLoadBraces
     " }
 
+    " syntastic {
+      let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+      let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+    " }
+
     " Tabularize {
       nmap <Leader>a& :Tabularize /&<CR>
       vmap <Leader>a& :Tabularize /&<CR>
@@ -264,7 +270,7 @@
     " }
 
     " { vim-go
-      let g:go_fmt_fail_silently = 1
+      let g:go_fmt_fail_silently = 0
       let g:go_highlight_functions = 1
       let g:go_highlight_methods = 1
       let g:go_highlight_structs = 1
@@ -272,6 +278,8 @@
       let g:go_highlight_interfaces = 1
       let g:go_highlight_extra_types = 1
       let g:go_highlight_build_constraints = 1
+      let g:go_list_type = "quickfix"
+
     " }
 
     " vimux {
