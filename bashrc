@@ -45,6 +45,7 @@ alias ty='tmux loadb -'
 
 alias be='bundle exec'
 alias gst='git status -s'
+alias gstt='git status'
 alias gd='git diff'
 
 alias vi=$(which vim)
