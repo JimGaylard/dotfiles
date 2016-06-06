@@ -127,9 +127,6 @@
   autocmd BufRead,BufNewFile */log/* set filetype=log
   autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
-  " Use goimports instead of goformat
-  let g:go_fmt_command = "goimports"
-
 " }
 
 " Key (re)Mappings {
@@ -270,6 +267,8 @@
     " }
 
     " { vim-go
+      " Use goimports instead of goformat
+      let g:go_fmt_command = "goimports"
       let g:go_fmt_fail_silently = 0
       let g:go_highlight_functions = 1
       let g:go_highlight_methods = 1
@@ -279,6 +278,7 @@
       let g:go_highlight_extra_types = 1
       let g:go_highlight_build_constraints = 1
       let g:go_list_type = "quickfix"
+      let g:go_auto_type_info = 1
 
     " }
 
