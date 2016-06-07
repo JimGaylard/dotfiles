@@ -12,12 +12,11 @@ NeoBundle 'markcornick/vim-vagrant'
 NeoBundle 'matchit.zip'
 NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
 NeoBundle 'mbbill/undotree'
-NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'neomake/neomake'
 NeoBundle 'ngmy/vim-rubocop'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'quentindecock/vim-cucumber-align-pipes'
 NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'scrooloose/syntastic'
 NeoBundle 'shougo/neobundle.vim'
 NeoBundle 'shougo/unite.vim'
 NeoBundle 'shougo/vimproc.vim', {

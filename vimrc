@@ -226,6 +226,14 @@
         let g:vim_json_syntax_conceal = 0
     " }
 
+    " Neomake {
+      " This setting will open the |loclist| or |quickfix| list (depending on whether
+      " it is operating on a file) when adding entries. A value of 2 will preserve the
+      " cursor position when the |loclist| or |quickfix| window is opened. Defaults to 0.
+      let g:neomake_open_list = 2
+      autocmd! BufWritePost * Neomake
+    " }
+
     " RainbowParentheses {
 
       au VimEnter * RainbowParenthesesToggle
@@ -269,7 +277,7 @@
     " { vim-go
       " Use goimports instead of goformat
       let g:go_fmt_command = "goimports"
-      let g:go_fmt_fail_silently = 0
+      let g:go_fmt_fail_silently = 1
       let g:go_highlight_functions = 1
       let g:go_highlight_methods = 1
       let g:go_highlight_structs = 1
