@@ -261,7 +261,6 @@
     " }
 
     " UndoTree {
-        nnoremap <Leader>u :UndotreeToggle<CR>
         " If undotree is opened, it is likely one wants to interact with it.
         let g:undotree_SetFocusWhenToggle=1
     " }
@@ -294,6 +293,8 @@
       nnoremap <leader>r :VimuxRunLastCommand<CR>
       nnoremap <leader>s :VimuxRunCommand ''<left>
       nnoremap <leader>z :VimuxZoomRunner<CR>
+      nnoremap ˚ :VimuxScrollUpInspect<CR>
+      nnoremap ∆ :VimuxScrollDownInspect<CR>
     " }
 
     " YouCompleteMe {
