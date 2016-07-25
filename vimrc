@@ -225,12 +225,15 @@
         nnoremap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
         let g:vim_json_syntax_conceal = 0
     " }
+    " ListToggle {
+      " Toggle loclist
+        let g:lt_location_list_toggle_map = '<TAB><TAB>'
+    " }
 
     " Neomake {
       " This setting will open the |loclist| or |quickfix| list (depending on whether
       " it is operating on a file) when adding entries. A value of 2 will preserve the
       " cursor position when the |loclist| or |quickfix| window is opened. Defaults to 0.
-      let g:neomake_open_list = 2
       autocmd! BufWritePost * Neomake
     " }
 
