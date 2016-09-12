@@ -56,6 +56,9 @@
   set hidden                          " Allow buffer switching without saving
   set lazyredraw                      " Don't show macros while they're happening
   set linebreak                       " Wrap but don't insert EOL
+
+  let g:python_host_prog = '/usr/bin/python'
+  let g:python3_host_prog = '/usr/bin/python3'
 " }
 
 " Vim UI {
