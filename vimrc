@@ -186,6 +186,7 @@
     map zh zH
 
     " vim-go maps
+    let g:go_autodetect_gopath = 1
     au FileType go nmap <Leader>dt <Plug>(go-def-tab)
     au FileType go nmap <Leader>gr :GoRename 
     au FileType go nmap <Leader>gm :GoMetaLinter<CR>
@@ -299,6 +300,7 @@
       nnoremap <leader>r :VimuxRunLastCommand<CR>
       nnoremap <leader>s :VimuxRunCommand ''<left>
       nnoremap <leader>z :VimuxZoomRunner<CR>
+      nnoremap <Leader>x :VimuxInterruptRunner<CR>
       nnoremap ˚ :VimuxScrollUpInspect<CR>
       nnoremap ∆ :VimuxScrollDownInspect<CR>
     " }
