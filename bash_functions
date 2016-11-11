@@ -58,6 +58,10 @@ clean_docker_containers() {
   docker ps -aq | xargs docker rm
 }
 
+delete_docker_image() {
+  docker images --no-trunc | grep $1 | awk '{print $3}' | xargs docker rmi -f
+}
+
 docker_killall() {
   docker kill $( docker ps -q )
 }
