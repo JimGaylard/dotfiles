@@ -29,6 +29,7 @@
 
 " General {
 
+  set inccommand=nosplit
   set noswapfile
   set exrc " use project vimrc
 
