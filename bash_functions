@@ -50,6 +50,10 @@ _aws_creds() {
 }
 complete -F _aws_creds aws_credentials
 
+function issh() {
+  instances | grep $1 | instance-ssh-details
+}
+
 clean_docker_images() {
   docker images --no-trunc | grep none | awk '{print $3}' | xargs docker rmi -f
 }
