@@ -250,11 +250,6 @@
       au Syntax * RainbowParenthesesLoadBraces
     " }
 
-    " syntastic {
-      let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-      let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-    " }
-
     " Tabularize {
       nmap <Leader>a& :Tabularize /&<CR>
       vmap <Leader>a& :Tabularize /&<CR>
