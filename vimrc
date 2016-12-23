@@ -1,28 +1,9 @@
 " Basics {
 
-  "correct setup for bundle
-  filetype on
-  filetype off
-  set rtp+=~/.config/nvim/bundle/neobundle.vim
-
-  " Use git protocol.
-  let g:neobundle#types#git#default_protocol = 'ssh'
-
-  call neobundle#begin(expand('~/.config/nvim/bundle/'))
-
-  "YouCompleteMe is slow to update
-  let g:neobundle#install_process_timeout = 1800
-
-  NeoBundleFetch 'Shougo/neobundle.vim'
-  " Use neobundle standard recipes.
-  NeoBundle 'Shougo/neobundle-vim-recipes', {'force' : 1}
-
-  source ~/.config/nvim/vimrc.bundles
-  call neobundle#end()
-
-  filetype plugin indent on   " Automatically detect file types.
-
-  NeoBundleCheck
+  "correct setup for vim-plug
+    call plug#begin('~/.config/nvim/plugged')
+      source ~/.config/nvim/vimrc.bundles
+    call plug#end()
 " }
 
 
