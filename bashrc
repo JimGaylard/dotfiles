@@ -38,8 +38,8 @@ PS1="$TITLEBAR\[\e[32;1m\]$PROMPT\[\e[0m\]"
   export PROMPT_COMMAND="$PROMPT_COMMAND; history -a" || \
   PROMPT_COMMAND="history -a"
 
-alias ll='ls -lG'
-alias l='ls -laF'
+alias ll='ls -lG --color'
+alias l='ls -laF --color'
 
 alias ty='tmux loadb -'
 
