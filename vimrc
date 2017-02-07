@@ -176,6 +176,9 @@
 " }
 
 " Plugins {
+    " Ag {
+      nnoremap <leader>/ :Ag 
+    " }
 
     " Ctags {
       set tags=tags,./tags;/,~/.vimtags
@@ -225,7 +228,6 @@
 
     " RainbowParentheses {
 
-      au VimEnter * RainbowParenthesesToggle
       au Syntax * RainbowParenthesesLoadRound
       au Syntax * RainbowParenthesesLoadSquare
       au Syntax * RainbowParenthesesLoadBraces
@@ -254,7 +256,13 @@
       call unite#filters#sorter_default#use(['sorter_rank'])
       call unite#custom#source('file_rec/git', 'ignore_pattern', 'vendor')
       nnoremap <C-p> :Unite -start-insert -no-split file_rec/git<cr>
-      nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
+      "nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
+      nnoremap <leader>b :Unite buffer -no-split<cr>
+      let g:unite_source_grep_command = 'ag'
+      let g:unite_source_grep_default_opts =
+            \ '--vimgrep --line-numbers --nocolor --nogroup --hidden --ignore ' .
+            \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+      let g:unite_source_grep_recursive_opt = ''
     " }
 
     " { vim-go
