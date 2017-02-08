@@ -17,7 +17,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
 Plug 'shougo/neobundle.vim'
 Plug 'shougo/unite.vim'
-Plug 'shougo/vimproc.vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'tomtom/tlib_vim'
 "Plug 'tpope/vim-classpath'
 Plug 'tpope/vim-cucumber'
