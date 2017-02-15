@@ -2,6 +2,7 @@ tags
 *.swp
 *.swn
 *.swo
+Session.vim
 .idea/
 .bundle
 .config
