@@ -108,10 +108,6 @@
   " Remove trailing whitespaces and newline chars
   autocmd FileType c,cpp,java,go,php,javascript,ruby,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
-  autocmd BufRead,BufNewFile *.log set filetype=log
-  autocmd BufRead,BufNewFile */log/* set filetype=log
-  autocmd BufNewFile,BufRead *.coffee set filetype=coffee
-
 " }
 
 " Key (re)Mappings {
@@ -177,7 +173,7 @@
 
 " Plugins {
     " Ag {
-      nnoremap <leader>/ :Ag 
+      nnoremap <leader>ag :Ag 
     " }
 
     " Ctags {
