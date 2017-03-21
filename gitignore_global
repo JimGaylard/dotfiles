@@ -15,3 +15,4 @@ TODO*
 .DS_Store
 *.swp
 tmp/
+.stack-work
