@@ -1,4 +1,5 @@
 export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/bin:/sbin:~/bin:$PATH
+export TZ=Australia/Melbourne
 
 # source other bash files
 ################################################
@@ -42,6 +43,7 @@ alias ll='ls -lG --color'
 alias l='ls -laF --color'
 
 alias ty='tmux loadb -'
+alias sm='emacsclient -t'
 
 alias be='bundle exec'
 alias gst='git status -s'
