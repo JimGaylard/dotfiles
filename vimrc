@@ -165,6 +165,7 @@
 
     " vim-go maps
     let g:go_autodetect_gopath = 1
+    let g:go_auto_type_info = 0
     au FileType go nmap <Leader>dt <Plug>(go-def-tab)
     au FileType go nmap <Leader>gr :GoRename 
     au FileType go nmap <Leader>gm :GoMetaLinter<CR>
