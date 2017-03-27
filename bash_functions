@@ -52,7 +52,3 @@ docker_latest() {
 tmnew() {
   tmux new-session -s $1
 }
-
-console() {
-  xdg-open $(aws-console-url)
-}
