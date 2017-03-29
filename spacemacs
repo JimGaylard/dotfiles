@@ -18,7 +18,6 @@ values."
    '(
      themes-megapack
      python
-     (spell-checking :variables =enable-flyspell-auto-completion= t)
      syntax-checking
      (auto-completion :variables
                       auto-completion-enable-help-tooltip t)
@@ -38,7 +37,6 @@ values."
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
-     spell-checking
      version-control
      )
    ;; List of additional packages that will be installed without being
