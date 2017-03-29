@@ -51,4 +51,4 @@ alias gstt='git status'
 alias gd='git diff'
 
 alias vi=$(which vim)
-alias emacs='emacs -nw'
+alias em='emacs -nw'
