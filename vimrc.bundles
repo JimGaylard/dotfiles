@@ -1,4 +1,5 @@
 Plug 'benmills/vimux'
+Plug 'derekwyatt/vim-scala'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'fatih/vim-go'
 "Plug 'guns/vim-clojure-static'
@@ -7,7 +8,6 @@ Plug 'jamessan/vim-gnupg'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'lambdatoast/elm.vim'
 Plug 'markcornick/vim-vagrant'
-Plug 'matchit.zip'
 Plug 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
 Plug 'mbbill/undotree'
 Plug 'neomake/neomake'
@@ -32,6 +32,7 @@ Plug 'Valloric/YouCompleteMe', {
   \ }
 \ }
 Plug 'vim-scripts/ag.vim'
+Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/xoria256.vim'
 " Haskell
 Plug 'eagletmt/ghcmod-vim'
