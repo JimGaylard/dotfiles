@@ -248,18 +248,65 @@
         let g:undotree_SetFocusWhenToggle=1
     " }
 
-    " Unite {
-      call unite#filters#matcher_default#use(['matcher_fuzzy'])
-      call unite#filters#sorter_default#use(['sorter_rank'])
-      call unite#custom#source('file_rec/git', 'ignore_pattern', 'vendor')
-      nnoremap <C-p> :Unite -start-insert -no-split file_rec/git<cr>
-      "nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
-      nnoremap <leader>b :Unite buffer -no-split<cr>
-      let g:unite_source_grep_command = 'ag'
-      let g:unite_source_grep_default_opts =
-            \ '--vimgrep --line-numbers --nocolor --nogroup --hidden --ignore ' .
-            \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
-      let g:unite_source_grep_recursive_opt = ''
+    " Denite {
+      nnoremap <C-p> :Denite -buffer-name=file_rec -direction=dynamictop -highlight_matched_char=false file_rec<cr>
+      nnoremap <Leader>b :Denite -buffer-name=buffers -direction=dynamictop -highlight_matched_char=false buffer<cr>
+
+      " Change mappings.
+      call denite#custom#map(
+            \ 'insert',
+            \ '<C-j>',
+            \ '<denite:move_to_next_line>',
+            \ 'noremap'
+            \)
+      call denite#custom#map(
+            \ 'insert',
+            \ '<C-k>',
+            \ '<denite:move_to_previous_line>',
+            \ 'noremap'
+            \)
+
+      " Change matchers.
+      call denite#custom#source(
+      \ 'file_rec', 'matchers', ['matcher_cpsm'])
+        " or 'matcher_fuzzy' with 'matcher_project_files'
+
+      " Change sorters.
+      call denite#custom#source(
+      \ 'file_rec', 'sorters', ['sorter_sublime'])
+        " or try 'sorter_rank'
+
+      " Add custom menus
+      let s:menus = {}
+
+      " Ag command on grep source
+      call denite#custom#var('grep', 'command', ['ag'])
+      call denite#custom#var('grep', 'default_opts',
+          \ ['-i', '--vimgrep'])
+      call denite#custom#var('grep', 'recursive_opts', [])
+      call denite#custom#var('grep', 'pattern_opt', [])
+      call denite#custom#var('grep', 'separator', ['--'])
+      call denite#custom#var('grep', 'final_opts', [])
+
+      " Change ignore_globs
+      call denite#custom#filter('matcher_ignore_globs', 'ignore_globs',
+            \ [ '.git/', '.ropeproject/', '__pycache__/',
+            \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
+
+        " Unite {
+          " call unite#filters#matcher_default#use(['matcher_fuzzy'])
+          " call unite#filters#sorter_default#use(['sorter_rank'])
+          " call unite#custom#source('file_rec/git', 'ignore_pattern', 'vendor')
+          " nnoremap <C-p> :Unite -start-insert -no-split file_rec/git<cr>
+          " "nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
+          " nnoremap <leader>b :Unite buffer -no-split<cr>
+          " let g:unite_source_grep_command = 'ag'
+          " let g:unite_source_grep_default_opts =
+          "       \ '--vimgrep --line-numbers --nocolor --nogroup --hidden --ignore ' .
+          "       \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+          " let g:unite_source_grep_recursive_opt = ''
+        " }
+
     " }
 
     " { vim-go
