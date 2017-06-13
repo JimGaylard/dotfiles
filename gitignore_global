@@ -16,3 +16,4 @@ TODO*
 *.swp
 tmp/
 .stack-work
+.idea
