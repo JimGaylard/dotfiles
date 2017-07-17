@@ -90,8 +90,6 @@
 
   autocmd Filetype go setlocal listchars=tab:\ \ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
   autocmd FileType yaml setl indentkeys-=<:>
-  " Add .cabal (haskell) to PATH
-  let $PATH = $PATH . ':' . expand('~/.cabal/bin')
 
 " }
 
@@ -291,7 +289,8 @@
       " Change ignore_globs
       call denite#custom#filter('matcher_ignore_globs', 'ignore_globs',
             \ [ '.git/', '.ropeproject/', '__pycache__/',
-            \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
+            \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/',
+            \   '.stack-work/'])
 
         " Unite {
           " call unite#filters#matcher_default#use(['matcher_fuzzy'])
