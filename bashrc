@@ -16,6 +16,10 @@ export AWS_DEFAULT_REGION=ap-southeast-2
 ################################################
 [ -e ~/.bash_functions ] && source ~/.bash_functions
 
+for f in ~/.bash-my-aws/lib/*-functions
+  do source $f
+done
+
 
 if [ -e ~/.bash_prompt ]
 then
