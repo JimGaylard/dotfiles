@@ -10,6 +10,7 @@ Plug 'lambdatoast/elm.vim'
 Plug 'markcornick/vim-vagrant'
 Plug 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
 Plug 'mbbill/undotree'
+Plug 'nbouscal/vim-stylish-haskell'
 Plug 'neomake/neomake'
 Plug 'ngmy/vim-rubocop'
 Plug 'pangloss/vim-javascript'
