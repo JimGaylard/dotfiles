@@ -1,6 +1,7 @@
 Plug 'benmills/vimux'
 Plug 'derekwyatt/vim-scala'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
 "Plug 'guns/vim-clojure-static'
 Plug 'godlygeek/tabular'
