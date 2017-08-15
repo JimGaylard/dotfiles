@@ -104,7 +104,7 @@
   set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
   autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
   " Remove trailing whitespaces and newline chars
-  autocmd FileType c,cpp,java,go,php,javascript,ruby,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+  autocmd FileType c,cpp,java,go,php,javascript,ruby,haskell,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
 " }
 
@@ -162,8 +162,6 @@
     map zh zH
 
     " vim-go maps
-    let g:go_autodetect_gopath = 1
-    let g:go_auto_type_info = 0
     au FileType go nmap <Leader>dt <Plug>(go-def-tab)
     au FileType go nmap <Leader>gr :GoRename 
     au FileType go nmap <Leader>gm :GoMetaLinter<CR>
@@ -177,6 +175,10 @@
 
     " Ctags {
       set tags=tags,./tags;/,~/.vimtags
+    " }
+
+    " deoplete {
+      let g:deoplete#enable_at_startup = 1
     " }
 
     " Fireplace {
@@ -310,17 +312,18 @@
 
     " { vim-go
       " Use goimports instead of goformat
+      let g:go_auto_type_info = 1
+      let g:go_autodetect_gopath = 1
       let g:go_fmt_command = "goimports"
       let g:go_fmt_fail_silently = 1
-      let g:go_highlight_functions = 1
-      let g:go_highlight_methods = 1
-      let g:go_highlight_structs = 1
-      let g:go_highlight_operators = 1
-      let g:go_highlight_interfaces = 1
-      let g:go_highlight_extra_types = 1
       let g:go_highlight_build_constraints = 1
+      let g:go_highlight_extra_types = 1
+      let g:go_highlight_functions = 1
+      let g:go_highlight_interfaces = 1
+      let g:go_highlight_methods = 1
+      let g:go_highlight_operators = 1
+      let g:go_highlight_structs = 1
       let g:go_list_type = "quickfix"
-      let g:go_auto_type_info = 0
 
     " }
 
@@ -335,10 +338,6 @@
       nnoremap <Leader>x :VimuxInterruptRunner<CR>
       nnoremap ˚ :VimuxScrollUpInspect<CR>
       nnoremap ∆ :VimuxScrollDownInspect<CR>
-    " }
-
-    " YouCompleteMe {
-      let g:ycm_add_preview_to_completeopt = 1
     " }
 
 " }

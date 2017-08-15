@@ -11,11 +11,13 @@ Plug 'markcornick/vim-vagrant'
 Plug 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
 Plug 'mbbill/undotree'
 Plug 'nbouscal/vim-stylish-haskell'
+Plug 'eagletmt/neco-ghc'
 Plug 'neomake/neomake'
 Plug 'ngmy/vim-rubocop'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/denite.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-cucumber'
@@ -26,12 +28,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'Valloric/ListToggle'
-Plug 'Valloric/YouCompleteMe', {
-  \ 'build'      : {
-  \ 'linux'    : './install.sh --clang-completer --system-libclang --omnisharp-completer',
-  \ 'unix'    : './install.sh --clang-completer --system-libclang --omnisharp-completer'
-  \ }
-\ }
 Plug 'vim-scripts/ag.vim'
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/xoria256.vim'
