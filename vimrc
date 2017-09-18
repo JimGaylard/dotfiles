@@ -185,6 +185,11 @@
         nnoremap <leader>e :Eval<CR>
     "}
 
+    " Ghc-Mod {
+      nnoremap <leader>ht :GhcModType<CR>
+      nnoremap <leader>htc :GhcModTypeClear<CR>
+    " }
+
     " Fugitive {
         nnoremap <silent> <leader>gs :Gstatus<CR>
         nnoremap <silent> <leader>gd :Gvdiff<CR>
