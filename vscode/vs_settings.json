@@ -1,0 +1,10 @@
+{
+    "editor.tabSize": 2,
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/bin/nvim",
+    "workbench.colorTheme": "Atom One Dark",
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.useSystemClipboard": true,
+    "vim.leader": ",",
+    "vim.hlsearch": true
+}

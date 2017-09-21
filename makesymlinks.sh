@@ -34,3 +34,7 @@ done
 mkdir -p ~/.config/nvim
 ln -s ~/dotfiles/vimrc ~/.config/nvim/init.vim
 ln -s ~/dotfiles/vimrc.bundles ~/.config/nvim/vimrc.bundles
+
+mkdir -p $HOME/.config/Code/User
+ln -s $HOME/dotfiles/vs_settings.json $HOME/.config/Code/User/settings.json
+ln -s $HOME/dotfiles/vs_keybindings.json $HOME/.config/Code/User/keybindings.json
