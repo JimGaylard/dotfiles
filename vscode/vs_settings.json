@@ -2,9 +2,18 @@
     "editor.tabSize": 2,
     "vim.enableNeovim": true,
     "vim.neovimPath": "/usr/bin/nvim",
-    "workbench.colorTheme": "Atom One Dark",
     "vim.disableAnnoyingNeovimMessage": true,
+    "editor.formatOnSave": true,
+    "window.zoomLevel": -3,
     "vim.useSystemClipboard": true,
+    "workbench.colorTheme": "One Dark Pro",
+    "vim.handleKeys": {
+        "<C-j>": false
+    },
+    "ruby.lint": {
+        "rubocop": true,
+        "ruby": true
+    }
     "vim.leader": ",",
     "vim.hlsearch": true
 }
