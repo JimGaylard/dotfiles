@@ -1,6 +1,14 @@
 {
+    "editor.cursorBlinking": "solid",
+    "editor.fontFamily": "'Source Code Pro Medium', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
     "editor.formatOnSave": true,
+    "editor.mouseWheelZoom": true,
+    "editor.smoothScrolling": true,
     "editor.tabSize": 2,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "haskell.hlint.run": "onSave",
     "ruby.lint": {
         "rubocop": true,
         "ruby": true
@@ -14,6 +22,6 @@
     "vim.leader": ",",
     "vim.neovimPath": "/usr/bin/nvim",
     "vim.useSystemClipboard": true,
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "workbench.colorTheme": "One Dark Pro"
 }
