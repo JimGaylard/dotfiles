@@ -22,6 +22,6 @@
     "vim.leader": ",",
     "vim.neovimPath": "/usr/bin/nvim",
     "vim.useSystemClipboard": true,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "workbench.colorTheme": "One Dark Pro"
 }
