@@ -19,6 +19,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/denite.nvim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-go'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-cucumber'
