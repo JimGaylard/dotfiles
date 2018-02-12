@@ -64,18 +64,11 @@ PS1="$TITLEBAR\[\e[32;1m\]$PROMPT\[\e[0m\]"
   export PROMPT_COMMAND="$PROMPT_COMMAND; history -a" || \
   PROMPT_COMMAND="history -a"
 
-alias ll='ls -lG --color'
-alias l='ls -laF --color'
-
 alias ty='tmux loadb -'
-alias sm='emacsclient -t'
 
-alias be='bundle exec'
 alias gst='git status -s'
 alias gstt='git status'
 alias gd='git diff'
 
-alias vi=$(which vim)
 alias gpg=gpg2
-alias em='emacs -nw'
 alias console='xdg-open $(aws-console-url)'
