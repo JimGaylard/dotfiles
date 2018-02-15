@@ -23,6 +23,7 @@ values."
      auto-completion
      better-defaults
      emacs-lisp
+     go
      haskell
      helm
      javascript
@@ -119,7 +120,10 @@ values."
 
 (defun dotspacemacs/user-config ()
 
-  ;; Editor
+  "Editor"
+  (setq-default indent-tabs-mode nil)
+  (setq-default tab-width 2)
+  (setq case-fold-search nil)
   (setq make-backup-files nil)
 
   ;; Haskell
@@ -129,6 +133,16 @@ values."
   ;; Evil Numbers (increment/decrement)
   (define-key evil-normal-state-map (kbd "C-a") 'evil-numbers/inc-at-pt)
   (define-key evil-normal-state-map (kbd "C-x") 'evil-numbers/dec-at-pt)
+
+  "Flycheck"
+  (add-hook 'after-init-hook #'global-flycheck-mode)
+
+  "Themes"
+  (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+
+  "Golang"
+  (setq gofmt-command "goimports")
+  (add-hook 'before-save-hook 'gofmt-before-save)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
