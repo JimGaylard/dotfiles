@@ -137,9 +137,6 @@ values."
   "Flycheck"
   (add-hook 'after-init-hook #'global-flycheck-mode)
 
-  "Themes"
-  (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-
   "Golang"
   (setq gofmt-command "goimports")
   (add-hook 'before-save-hook 'gofmt-before-save)
@@ -189,5 +186,4 @@ values."
      (360 . "#DC8CC3"))))
  '(vc-annotate-very-old-color "#DC8CC3")
  )
-(custom-set-faces
- '(default ((((class color) (min-colors 4096)) (:foreground "#5f5f5f" :background "#fdfde7")) (((class color) (min-colors 256)) (:foreground "#5f5f5f" :background "#fdfde7")) (((class color) (min-colors 89)) (:foreground "#5f5f5f" :background "#fdfde7")))))
+(custom-set-faces nil)
