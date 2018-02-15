@@ -15,7 +15,11 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     yaml
+     ;; git
+     ;; markdown
+     ;; org
+     ;; spell-checking
+     ;; version-control
      auto-completion
      better-defaults
      emacs-lisp
@@ -23,16 +27,12 @@ values."
      helm
      javascript
      ruby
+     syntax-checking
+     themes-megapack
+     yaml
      (shell :variables
             shell-default-height 30
             shell-default-position 'right)
-     syntax-checking
-     themes-megapack
-     ;; git
-     ;; markdown
-     ;; org
-     ;; spell-checking
-     ;; version-control
      )
 
    dotspacemacs-additional-packages '()
