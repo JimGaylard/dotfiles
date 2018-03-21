@@ -141,6 +141,7 @@ values."
 
   "Flycheck"
   (add-hook 'after-init-hook #'global-flycheck-mode)
+  (setq flycheck-pos-tip-timeout 15)
 
   "Golang"
   (add-hook 'go-mode-hook
@@ -161,7 +162,7 @@ values."
  '(company-quickhelp-color-foreground "#DCDCCC")
  '(custom-safe-themes
    (quote
-    ("0f90f1a9b666877d24d93d8c6330a5b68becdebe1cc55ef859799e84c6c4c08e" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "599f1561d84229e02807c952919cd9b0fbaa97ace123851df84806b067666332" "868f73b5cf78e72ca2402e1d48675e49cc9a9619c5544af7bf216515d22b58e7" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
+    ("e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" "0f90f1a9b666877d24d93d8c6330a5b68becdebe1cc55ef859799e84c6c4c08e" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "599f1561d84229e02807c952919cd9b0fbaa97ace123851df84806b067666332" "868f73b5cf78e72ca2402e1d48675e49cc9a9619c5544af7bf216515d22b58e7" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
  '(evil-want-Y-yank-to-eol t)
  '(fci-rule-color "#383838" t)
  '(nrepl-message-colors
@@ -198,4 +199,4 @@ values."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:foreground "#DCDCCC" :background "#3F3F3F")))))
+ )
