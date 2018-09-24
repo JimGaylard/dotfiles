@@ -40,7 +40,6 @@ values."
    dotspacemacs-additional-packages
    '(
      evil-magit
-     flycheck-shellcheck
      magit
      nix-buffer
      nix-mode)
@@ -146,7 +145,6 @@ values."
 
   "Flycheck"
   (add-hook 'after-init-hook #'global-flycheck-mode)
-  (setq flycheck-pos-tip-timeout 15)
   (add-hook 'sh-mode-hook 'flycheck-mode)
 
   "Golang"
