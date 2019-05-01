@@ -14,15 +14,19 @@ export AWS_DEFAULT_REGION=ap-southeast-2
 
 # source other bash files
 ################################################
+# shellcheck source=/home/jgaylard/.bash_functions
 [ -e ~/.bash_functions ] && source ~/.bash_functions
 
 for f in ~/.bash-my-aws/lib/*-functions
-  do source $f
+do
+  # shellcheck source=/dev/null
+  source "$f"
 done
 
 
 if [ -e ~/.bash_prompt ]
 then
+  # shellcheck source=/home/jgaylard/.bash_prompt
   source ~/.bash_prompt
 else
   TITLEBAR="\[\e]2;\w\a\]"
@@ -31,15 +35,18 @@ else
   PS1="$TITLEBAR\[\e[32;1m\]$PROMPT\[\e[0m\]"
 fi
 
-source $HOME/.git-prompt.sh
+# shellcheck source=/home/jgaylard/.git-prompt.sh
+source "$HOME/.git-prompt.sh"
 
 source /usr/local/share/chruby/chruby.sh
 chruby 2
 
+# shellcheck source=/home/jgaylard/.aws-shortcuts/aws-shortcuts.sh
 source ~/.aws-shortcuts/aws-shortcuts.sh
-for file in $HOME/scripts/*
+for file in "$HOME"/scripts/*
 do
-  source $file
+  # shellcheck source=/dev/null
+  source "$file"
 done
 
 # set environment and aliases
@@ -49,7 +56,8 @@ set -o vi
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
 unset HISTFILESIZE
-export EDITOR=$(which nvim)
+EDITOR=$(command -v nvim)
+export EDITOR
 shopt -s histappend
 
 #if [ $TERM != "linux" ]; then
@@ -59,8 +67,9 @@ GIT_PS1_SHOWDIRTYSTATE=1
 PROMPT="\u@\h:\w\$(__git_ps1 ' [%s]')\n\$ "
 PS1="$TITLEBAR\[\e[32;1m\]$PROMPT\[\e[0m\]"
 
+# shellcheck source=/home/jgaylard/.bash_prompt
 [ -e ~/.bash_prompt ] && source ~/.bash_prompt
-[ PROMPT_COMMAND ] && \
+[ "$PROMPT_COMMAND" ] && \
   export PROMPT_COMMAND="$PROMPT_COMMAND; history -a" || \
   PROMPT_COMMAND="history -a"
 
