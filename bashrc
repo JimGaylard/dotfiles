@@ -81,3 +81,8 @@ alias gd='git diff'
 
 alias gpg=gpg2
 alias console='xdg-open $(aws-console-url)'
+
+if  ! (tmux list-sessions > /dev/null)
+then
+  /usr/bin/tmux
+fi
