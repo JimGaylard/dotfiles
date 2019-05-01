@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/bin:/sbin:~/bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/bin:/sbin:~/bin:~/.npm-global/bin:$PATH
 export TZ=Australia/Melbourne
 
 export GOPATH=$HOME/go
