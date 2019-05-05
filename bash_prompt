@@ -44,7 +44,8 @@ function set_bash_prompt () {
 ${DARK_GRAY}this is a blank line${COLOR_NONE}\n\
 ${BLUE}\u@\h${COLOR_NONE} \
 ${GRAY}\w${COLOR_NONE}\
-${GREEN}$(__git_ps1)${COLOR_NONE}\n\
+${GREEN}$(__git_ps1)${COLOR_NONE} \
+${YELLOW}level:$SHLVL\n\
 ${PROMPT_SYMBOL}
 _EOF_
 
