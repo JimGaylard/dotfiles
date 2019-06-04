@@ -22,6 +22,8 @@ do
   # shellcheck source=/dev/null
   source "$f"
 done
+# shellcheck source=/home/jgaylard/.bash-my-aws/bash_completion.sh
+source "$HOME"/.bash-my-aws/bash_completion.sh
 
 
 if [ -e ~/.bash_prompt ]
