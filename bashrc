@@ -17,13 +17,16 @@ export AWS_DEFAULT_REGION=ap-southeast-2
 # shellcheck source=/home/jgaylard/.bash_functions
 [ -e ~/.bash_functions ] && source ~/.bash_functions
 
-for f in ~/.bash-my-aws/lib/*-functions
-do
-  # shellcheck source=/dev/null
-  source "$f"
-done
-# shellcheck source=/home/jgaylard/.bash-my-aws/bash_completion.sh
-source "$HOME"/.bash-my-aws/bash_completion.sh
+if [ -e ~/.bash-my-aws ]
+then
+  for f in ~/.bash-my-aws/lib/*-functions
+  do
+    # shellcheck source=/dev/null
+    source "$f"
+  done
+  # shellcheck source=/home/jgaylard/.bash-my-aws/bash_completion.sh
+  source "$HOME"/.bash-my-aws/bash_completion.sh
+fi
 
 
 if [ -e ~/.bash_prompt ]
@@ -38,18 +41,25 @@ else
 fi
 
 # shellcheck source=/home/jgaylard/.git-prompt.sh
-source "$HOME/.git-prompt.sh"
+[ -e ~/.git-prompt.sh ] && source "$HOME/.git-prompt.sh"
 
-source /usr/local/share/chruby/chruby.sh
-chruby 2
+if [ -e /usr/local/share/chruby/chruby.sh ]
+then
+  source /usr/local/share/chruby/chruby.sh
+  chruby 2
+fi
 
 # shellcheck source=/home/jgaylard/.aws-shortcuts/aws-shortcuts.sh
-source ~/.aws-shortcuts/aws-shortcuts.sh
-for file in "$HOME"/scripts/*
-do
-  # shellcheck source=/dev/null
-  source "$file"
-done
+[ -e ~/.aws-shortcuts ] && source ~/.aws-shortcuts/aws-shortcuts.sh
+
+if [ -e ~/scripts ]
+then
+  for file in "$HOME"/scripts/*
+  do
+    # shellcheck source=/dev/null
+    source "$file"
+  done
+fi
 
 # set environment and aliases
 ################################################
